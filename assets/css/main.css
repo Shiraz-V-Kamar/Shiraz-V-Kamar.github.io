@@ -1751,15 +1751,13 @@ input, select, textarea {
 		}
 	  }
 
-	/* Works/GameVideo */
+	/* Works/GamePage */
 
 	  .Game-video{
 		position: relative;
 		padding-bottom: 56.25%;
 		/* equals 16:9 */
 		height: 0;
-	
-
 	  }
 
 	  .Game-video iframe{
@@ -1770,5 +1768,34 @@ input, select, textarea {
 		height: 100%;
 
 	  }
+
+
+	  .GameDetails{
+		margin-top: 1.5em;
+		display: flex;
+		width: auto;
+		grid-gap: 1rem;
+		/* align-items: start; */
+		grid-template-columns: repeat(2,auto-fit);
+		
+	  }
+
+	  .GameInformation{
+		width: 50em;
+		background-color:rgba(27, 31, 34, 0.85);
+		border-radius: 0.4rem;
+		overflow: hidden;
+		padding: 1.2%;
+	  }
+
+	  .GameToolInfo{
+		width: auto;
+		background-color:rgba(27, 31, 34, 0.85);
+		border-radius: 0.4rem;
+		overflow: hidden;
+		padding: 1.2%;
+	  }
+
+	
 
 
