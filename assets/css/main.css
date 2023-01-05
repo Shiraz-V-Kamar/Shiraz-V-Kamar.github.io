@@ -1661,41 +1661,13 @@ input, select, textarea {
 
 
 /* My Experimentation */
-/* Portfolio
-	.gird{
-		display: grid;
-		grid-gap: 6rem;
-		grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
-		align-items: auto;
-		
-	}
-
-	.grid-item{
-		background-color: rgb(122, 122, 122) ;
-		border-radius: 0.4rem;
-		overflow: hidden;
-		box-shadow: 0 3rem 6rem black;
-		cursor: pointer;
-		transform: 0.2s ease;
-	}
-
-	.grid-item:hover{
-		transform: translateY(-0.5%);
-		box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5); 
-	} */
-
-	/* .works{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		min-height: 100vh;
-		
-	} */
+	/* Portfolio */
 	.grid {
 		display: grid;
 		width: auto;
 		grid-gap: 1rem;
-		grid-template-columns: repeat(auto-fit);
+		/* grid-template-columns: repeat(auto-fit); */
+		grid-template-columns: repeat(2,1fr);
 		align-items: start;
 	  }
 	  
@@ -1779,14 +1751,14 @@ input, select, textarea {
 		}
 	  }
 
-	  /* Works/GameVideo */
+	/* Works/GameVideo */
+
 	  .Game-video{
 		position: relative;
 		padding-bottom: 56.25%;
 		/* equals 16:9 */
 		height: 0;
-		/* max-width:fit-content; */
-		/* display: inline-block; */
+	
 
 	  }
 
