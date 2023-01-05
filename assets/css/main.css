@@ -1667,7 +1667,7 @@ input, select, textarea {
 		width: auto;
 		grid-gap: 1rem;
 		/* grid-template-columns: repeat(auto-fit); */
-		grid-template-columns: repeat(2,1fr);
+		grid-template-columns: repeat(2,auto-fit);
 		align-items: start;
 	  }
 	  
@@ -1742,17 +1742,52 @@ input, select, textarea {
 	  }
 	  
 	  @media only screen and (max-width: 60em) {
+		.card-header {
+			font-size: 1rem;
+			font-weight: 60;
+			color: #0d0d0d;
+			margin-bottom: 0.5rem;
+		  }
+
+		.card-text {
+			font-size: 1rem;
+			letter-spacing: 0.1rem;
+			line-height: 1.7;
+			color: #000000;
+			margin-bottom: 2.5rem;
+		  }
+
 		body {
 		  padding: 3rem;
 		}
 	  
 		.grid {
-		  grid-gap: 3rem;
+		  grid-gap: 1.2rem;		
+		}
+
+		.card-content {
+			padding: 1.5rem;
+		  }
+
+		.card-img {
+			display: block;
+			width: 100%;
+			height: 5rem;
+			object-fit: cover;
+		  }
+
+		.grid-item {
+			background-color: #fff;
+			border-radius: 0.4rem;
+			overflow:hidden; 
+			box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+			transition: 0.2s;
 		}
 	  }
 
 	/* Works/GamePage */
-
+	  /* Game Video */
 	  .Game-video{
 		position: relative;
 		padding-bottom: 56.25%;
@@ -1769,7 +1804,7 @@ input, select, textarea {
 
 	  }
 
-
+	  /* Game Information */
 	  .GameDetails{
 		margin-top: 1.5em;
 		display: flex;
@@ -1795,6 +1830,27 @@ input, select, textarea {
 		overflow: hidden;
 		padding: 1.2%;
 	  }
+
+	  @media only screen and (max-width: 60em) {
+		.GameDetails{
+			margin-top: 1.5em;
+			display: grid;
+			width: auto;
+			/* grid-gap: 1rem; */
+			/* align-items: start; */
+			grid-template-columns: repeat(auto);
+			
+		  }
+
+		  .GameInformation{
+			width: auto;
+			background-color:rgba(27, 31, 34, 0.85);
+			border-radius: 0.4rem;
+			overflow: hidden;
+			padding: 1.2%;
+		  }
+	  }
+
 
 	
 
