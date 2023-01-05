@@ -732,6 +732,7 @@ input, select, textarea {
 	ul {
 		list-style: disc;
 		margin: 0 0 2rem 0;
+		
 		padding-left: 1em;
 	}
 
@@ -1232,6 +1233,8 @@ input, select, textarea {
 
 		}
 
+		
+
 /* Header */
 
 	#header {
@@ -1620,6 +1623,13 @@ input, select, textarea {
 
 		}
 
+		/* @media only screen and (max-width: 60em) {
+			#main article {
+				
+				padding: 2.5rem 1rem 0.1rem 1rem ;
+			}
+		} */
+
 /* Footer */
 
 	#footer {
@@ -1701,6 +1711,7 @@ input, select, textarea {
 		font-weight: 60;
 		color: #0d0d0d;
 		margin-bottom: 1.5rem;
+		text-decoration: underline ;
 	  }
 	  
 	  .card-text {
@@ -1847,8 +1858,20 @@ input, select, textarea {
 			background-color:rgba(27, 31, 34, 0.85);
 			border-radius: 0.4rem;
 			overflow: hidden;
-			padding: 1.2%;
+			padding: 1rem 2rem 1rem .5rem;
 		  }
+		  
+		  .Project-Heading{
+			  font-size: 1.5rem;
+			  line-height: 1.4;
+			  letter-spacing: 0.5rem;
+			  border-bottom: solid 1px #ffffff;
+			  padding-bottom: 0.5rem;
+			  margin: 0 0 2rem 0;
+		  }
+
+		 . 
+		  margin: 0 0 0.5rem 0.5rem ;
 	  }
 
 
