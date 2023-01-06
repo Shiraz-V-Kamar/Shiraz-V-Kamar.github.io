@@ -1707,19 +1707,25 @@ input, select, textarea {
 	  }
 	  
 	  .card-header {
-		font-size: 1rem;
-		font-weight: 60;
+		border-bottom: solid 1px #400808;
+		width: max-content;
+		padding-bottom: 0.5rem;
+		margin: 0 0 2rem 0;
+		font-size: 1.5rem;
+		line-height: 1.4;
+		letter-spacing: 0.5rem;
 		color: #0d0d0d;
 		margin-bottom: 1.5rem;
-		text-decoration: underline ;
 	  }
 	  
 	  .card-text {
+		/* display: flex; */
 		font-size: 1.6rem;
 		letter-spacing: 0.1rem;
 		line-height: 1.7;
 		color: #000000;
 		margin-bottom: 2.5rem;
+		margin-right: 0.5rem;
 	  }
 	  
 	  .card-btn {
@@ -1754,8 +1760,8 @@ input, select, textarea {
 	  
 	  @media only screen and (max-width: 60em) {
 		.card-header {
-			font-size: 1rem;
-			font-weight: 60;
+			font-size: 1.25em;
+			line-height: 1.5;
 			color: #0d0d0d;
 			margin-bottom: 0.5rem;
 		  }
@@ -1821,7 +1827,6 @@ input, select, textarea {
 		display: flex;
 		width: auto;
 		grid-gap: 1rem;
-		/* align-items: start; */
 		grid-template-columns: repeat(2,auto-fit);
 		
 	  }
@@ -1870,8 +1875,9 @@ input, select, textarea {
 			  margin: 0 0 2rem 0;
 		  }
 
-		 . 
-		  margin: 0 0 0.5rem 0.5rem ;
+		 
+		  /* Wanted to change the padding for list item only when viewed in mobile 
+		   margin: 0 0 0.5rem 0.5rem ; */
 	  }
 
 
