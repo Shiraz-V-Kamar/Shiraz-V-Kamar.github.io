@@ -158,12 +158,26 @@
 									</ul>
 								</form>
 								<ul class="icons">
+									<li><a href="#" onclick="callNumber()"  class="icons brands fa-solid fa-mobile-screen-button"> </a>  </li>	
 									<li><a href="http://www.linkedin.com/in/shiraz-v-kamaruddin" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
 									<li><a href="https://www.instagram.com/dead_bloody_red/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<script>
+										function callNumber() {
+										  // Check if the device is a mobile device
+										  if (window.innerWidth < 480) {
+											// Redirect the user to the tel: URL
+											window.location.href = "tel:1234567890";
+										  } else {
+											// Copy the number to the clipboard
+											copyNumber();
+										  }
+										}
+										</script>
 									<!-- <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li> -->
 								</ul>
-								<ul>
-									<li>+91 7907461696</li>	
+								<ul class="icons">
+									
+									<!-- &nbsp; +91 7907461696 -->
 								</ul>
 								<p></p>
 							</article>
