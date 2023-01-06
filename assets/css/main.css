@@ -1677,7 +1677,7 @@ input, select, textarea {
 		width: auto;
 		grid-gap: 1rem;
 		/* grid-template-columns: repeat(auto-fit); */
-		grid-template-columns: repeat(2,auto-fit);
+		grid-template-columns: repeat(2,1fr);
 		align-items: start;
 	  }
 	  
@@ -1779,7 +1779,11 @@ input, select, textarea {
 		}
 	  
 		.grid {
-		  grid-gap: 1.2rem;		
+			display: grid;
+			width: auto;
+			grid-template-columns: repeat(1,auto);
+			align-items: start;
+		    grid-gap: 1.2rem;		
 		}
 
 		.card-content {
