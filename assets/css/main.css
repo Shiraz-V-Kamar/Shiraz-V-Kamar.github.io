@@ -1825,7 +1825,7 @@ input, select, textarea {
 
 	  }
 
-	  /* Game Information */
+	/* Game Information */
 	  .GameDetails{
 		margin-top: 1.5em;
 		display: flex;
@@ -1883,7 +1883,124 @@ input, select, textarea {
 		  /* Wanted to change the padding for list item only when viewed in mobile 
 		   margin: 0 0 0.5rem 0.5rem ; */
 	  }
+	  /* Info Cards */
+	  .skills-grid {
+		/* display: grid;
+		grid-template-columns: repeat(2,1fr); */
+		display: flex;
+		width: 100%;
+		height: auto;
+		padding: 0.5rem;
+	  }
+	  
+	  .skillList{
+		width: 30%;
+		height: 100%;
+	  }
 
+	  .Softwares{
+		width: 70%;
+		height: 100%;
+	  }
+	  
+	  .Languages{
+		width: 50%;
+		height: 100%;
+	  }
+
+	  .hobbies{
+		width: 50%;
+		height: 100%;
+	  }
+	  
+	  .skills-banner {
+		background-color:  rgb(109, 17, 17);
+		height: 0.4rem;
+		border-top-left-radius: 0.4rem;
+		border-top-right-radius: 0.4rem; 
+	  } 
+
+	  .softwareBanner{
+		width: 98.5%;
+	  }
+
+	  .skillListBanner{
+		width: 97%;
+	  }
+
+	  .hibbiesbanner{
+		width: 98%;
+	  }
+
+	  .languageBanner{
+		width: 98%;
+	  }
+	  .skills-content {
+		margin-right: 10px ;
+		padding: 1rem;
+		background-color:  rgba(19, 21, 25, 0.5);
+		border-bottom-left-radius: 0.4rem;
+		border-bottom-right-radius: 0.4rem;
+	  }
+	  
+	  
+	  
+	  .skills-header {
+		width: max-content;
+		font-size: 1.5rem;
+		line-height: 1.4;
+		letter-spacing: 0.5rem;
+		color: #e9e9e9;
+		margin-bottom: 1.5rem;
+	  }
+	  
+	  .skills-text {
+		/* padding: 25px 3px 10px 3px; */
+		font-size: 1rem;
+		letter-spacing: 0.1rem;
+		line-height: 1.7;
+		color: #fff;
+		margin-bottom: 2.5rem;
+	  }
+	  
+	  @media only screen and (max-width: 60em) {
+
+
+		.skills-text {
+			font-size: 1rem;
+			letter-spacing: 0.1rem;
+			line-height: 1.7;
+			color: #fff;
+			margin-bottom: 2.5rem;
+		  }
+
+		body {
+		  padding: 3rem;
+		}
+	  
+		.skills-grid {
+			display: grid;
+			width: auto;
+			grid-template-columns: repeat(1,auto);
+			align-items: start;
+		    grid-gap: 1.2rem;		
+		}
+
+		.skills-content {
+			padding: 1.5rem;
+		  }
+
+		
+
+		.skills-content {
+			background-color: #fff;
+			border-radius: 0.4rem;
+			overflow:hidden; 
+			box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+			cursor: pointer;
+			transition: 0.2s;
+		}
+	  }
 
 	
 
