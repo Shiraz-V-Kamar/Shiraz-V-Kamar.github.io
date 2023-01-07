@@ -1,7 +1,24 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
+:root{
+	--color-primary:  rgba(27, 31, 34, 0.85);
+	--color-accentColor: #4e040b ;
+	--color-accentColor2: #880714 ;
+	--color-accentColor3:#671313;
+	--color-elementColor0: #793232;
+	--color-elementColor1: #875252;
+	--color-elementColor2: #ff847c;
+	--color-elementColor3: #cfa787;
+	--color-elementColor4: #99b898;
+	--color-lightGrey: #716b6d;
+	--color-lightGrey:#808782;
+	--color-darkGrey2: #1a1e20; /*Used for cards*/
 
+	/* Colors in Template */
+	--color-backgroundColor: rgba(27, 31, 34, 0.85);
+	--color-accentColorFirstTry:#671313;
+}
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -1682,17 +1699,19 @@ input, select, textarea {
 	  }
 	  
 	  .grid-item {
-		background-color: #fff;
+		/* background-color: #fff; */
+		background-color: var(--color-darkGrey2);
 		border-radius: 0.4rem;
 		overflow: hidden;
-		box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 		cursor: pointer;
 		transition: 0.2s;
 	  }
 	  
 	  .grid-item:hover {
 		transform: translateY(-0.5%);
-		box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5);
+		/* box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.5); */
+		box-shadow: .5rem 1.5rem 2rem rgba(0, 0, 0, 0.5);
 	  }
 	  
 	  .card-img {
@@ -1707,14 +1726,14 @@ input, select, textarea {
 	  }
 	  
 	  .card-header {
-		border-bottom: solid 1px #400808;
+		border-bottom: solid 1px #ffffff;
 		width: max-content;
 		padding-bottom: 0.5rem;
 		margin: 0 0 2rem 0;
 		font-size: 1.5rem;
 		line-height: 1.4;
 		letter-spacing: 0.5rem;
-		color: #0d0d0d;
+		color: #ffffff;
 		margin-bottom: 1.5rem;
 	  }
 	  
@@ -1723,7 +1742,7 @@ input, select, textarea {
 		font-size: 1.6rem;
 		letter-spacing: 0.1rem;
 		line-height: 1.7;
-		color: #000000;
+		color: #ffffff;
 		margin-bottom: 2.5rem;
 		margin-right: 0.5rem;
 	  }
@@ -1750,7 +1769,8 @@ input, select, textarea {
 	  
 	  .card-btn:hover,
 	  .card-btn:active {
-		background-color: #390a0a;
+		/* background-color: #390a0a; */
+		background-color: var(--color-accentColor);
 	  }
 	  
 	  .card-btn:hover span,
@@ -1894,12 +1914,12 @@ input, select, textarea {
 	  }
 	  
 	  .skillList{
-		width: 30%;
+		width: 50%;
 		height: 100%;
 	  }
 
 	  .Softwares{
-		width: 70%;
+		width: 50%;
 		height: 100%;
 	  }
 	  
@@ -1913,37 +1933,23 @@ input, select, textarea {
 		height: 100%;
 	  }
 	  
+	  .skills-content {
+		margin-right: 10px ;
+		padding: 0 1rem 1rem;
+		background-color:  var(--color-darkGrey2);
+		border-radius: .4rem;
+	  }
 	  .skills-banner {
+		margin-left: -1rem;
+		margin-bottom: 1rem;
+		display: block;
 		background-color:  rgb(109, 17, 17);
 		height: 0.4rem;
 		border-top-left-radius: 0.4rem;
 		border-top-right-radius: 0.4rem; 
+		width: 108.25%;
+		padding-bottom: .5rem;
 	  } 
-
-	  .softwareBanner{
-		width: 98.5%;
-	  }
-
-	  .skillListBanner{
-		width: 97%;
-	  }
-
-	  .hibbiesbanner{
-		width: 98%;
-	  }
-
-	  .languageBanner{
-		width: 98%;
-	  }
-	  .skills-content {
-		margin-right: 10px ;
-		padding: 1rem;
-		background-color:  rgba(19, 21, 25, 0.5);
-		border-bottom-left-radius: 0.4rem;
-		border-bottom-right-radius: 0.4rem;
-	  }
-	  
-	  
 	  
 	  .skills-header {
 		width: max-content;
@@ -1955,7 +1961,6 @@ input, select, textarea {
 	  }
 	  
 	  .skills-text {
-		/* padding: 25px 3px 10px 3px; */
 		font-size: 1rem;
 		letter-spacing: 0.1rem;
 		line-height: 1.7;
@@ -2001,6 +2006,212 @@ input, select, textarea {
 			transition: 0.2s;
 		}
 	  }
+
+	/* Skills Progressbar */
+	.progress-bars{
+		display: grid;
+		grid-template-columns: repeat(1,1fr);
+		grid-gap: 0.5rem;
+		
+	}
+
+	.progress-bar{
+		display: flex;
+		flex-direction: column;
+	}
+
+	.progress-con{
+		display: flex;
+		align-items: center;
+		margin-bottom: 1rem;
+	}
+
+	.progress{
+		width: 100%;
+		height: .45rem;
+		/* margin-left: 1rem; */
+		background-color: var(--color-lightGrey);
+		position: relative;
+		
+	}
+
+	.bar{
+		position: absolute;
+		height: 100%;
+		transition-delay: all .4 ease-in-out;
+	}
+
+	/* Skill 1 👇🏽*/
+	.csharp-bar{
+		background-color: var(--color-accentColor3);
+		width: 75%;
+	}
+	.csharp-Marker{
+		color: var(--color-accentColor3);
+	}
+
+	.python-bar{
+		background-color: var(--color-elementColor1);
+		width: 60%;
+	}
+	.python-Marker{
+		color: var(--color-elementColor1);
+	}
+	/* .pythonLanguage{
+		text-decoration: underline 4px var(--color-elementColor1);
+
+	}
+
+	.javaLanguage{
+		text-decoration: underline 4px var(--color-elementColor3);
+	} */
+
+	/* skill 2 👇🏽*/
+	.java-bar{
+		background-color: var(--color-elementColor1);
+		width: 40%;
+	}
+	.cplus-Marker{
+		color: var(--color-elementColor1);
+	}
+
+	/* Skill 3 👇🏽*/
+	.html-bar{
+		background-color:var(--color-accentColor3);
+		width: 75%;
+	}
+
+	.html-Marker{
+		color: var(--color-accentColor3);
+	}
+
+	.css-bar{
+		background-color:var(--color-elementColor1);
+		width: 65%;
+	}
+	.css-Marker{
+		color: var(--color-elementColor1);
+	}
+	
+	/* skill 4 👇🏽*/
+	.vs-bar{
+		background-color: var(--color-elementColor1);
+		width: 75%;
+	}
+
+	/* skill 5 👇🏽*/
+	.vscode-bar{
+		background-color: var(--color-elementColor1);
+		width: 50%;
+
+	}
+
+	/* skill 6 👇🏽*/
+	.unreal-bar{
+		background-color: var(--color-elementColor1);
+		width: 45%;
+	}
+	.unreal-Marker{
+		color: var(--color-elementColor1);
+	}
+	.unity-bar{
+		background-color: var(--color-accentColor3);
+		width: 80%;
+	}
+	.unity-Marker{
+		color: var(--color-accentColor3);
+	}
+
+	/* skill 7 👇🏽*/
+	.notion-bar{
+		background-color: var(--color-accentColor3);
+		width: 85%;
+	}
+	.notion-Marker{
+		color: var(--color-accentColor3);
+	}
+	.miro-bar{
+		background-color: var(--color-elementColor1);
+		width: 75%;
+	}
+	.miro-Marker{
+		color: var(--color-elementColor1);
+	} 
+
+	/* skill 6 👇🏽*/
+	.photoshop-bar{
+		background-color: var(--color-accentColor3);
+		width: 80%;
+	}
+	.photoshop-Marker{
+		color: var(--color-accentColor3);
+	}
+	.illustrator-Marker{
+		color: var(--color-elementColor1);
+	}
+	.illustrator-bar{
+		background-color: var(--color-elementColor1);
+		width: 50%;
+	}
+	
+
+	/* skill 7 👇🏽*/
+	.premier-bar{
+		background-color: var(--color-accentColor3);
+		width: 65%;
+	}
+	.premier-Marker{
+		color: var(--color-accentColor3);
+	}
+	.afterEffects-Marker{
+		color: var(--color-elementColor1);
+	}
+	.afterEffects-bar{
+		background-color: var(--color-elementColor1);
+		width: 45%;
+	}
+
+	/* skill 8 👇🏽*/
+	.maya-bar{
+		background-color: var(--color-accentColor3);
+		width:65%;
+	}
+	.maya-Marker{
+		color: var(--color-accentColor3);
+	}
+	.blender-Marker{
+		color: var(--color-elementColor1);
+	}
+	.blender-bar{
+		background-color: var(--color-elementColor1);
+		width: 45%;
+	}
+	.zbrush-Marker{
+		color: var(--color-elementColor0);
+	}
+	.zbrush-bar{
+		background-color: var(--color-elementColor0);
+		width: 55%;
+	}
+
+
+	/* skill 9 👇🏽*/
+	.substance-bar{
+		background-color: var(--color-elementColor1);
+		width:80%;
+	}
+	.substance-Marker{
+		color: var(--color-elementColor1);
+	}
+
+	/* skill 10 👇🏽*/
+	.github-bar{
+		background-color: var(--color-elementColor1);
+		width:80%;
+	}
+	.github-Marker{
+		color: var(--color-elementColor1);
+	}
 
 	
 
