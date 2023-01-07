@@ -1693,7 +1693,6 @@ input, select, textarea {
 		display: grid;
 		width: auto;
 		grid-gap: 1rem;
-		/* grid-template-columns: repeat(auto-fit); */
 		grid-template-columns: repeat(2,1fr);
 		align-items: start;
 	  }
@@ -1782,7 +1781,7 @@ input, select, textarea {
 		.card-header {
 			font-size: 1.25em;
 			line-height: 1.5;
-			color: #0d0d0d;
+			color: white;
 			margin-bottom: 0.5rem;
 		  }
 
@@ -1790,7 +1789,7 @@ input, select, textarea {
 			font-size: 1rem;
 			letter-spacing: 0.1rem;
 			line-height: 1.7;
-			color: #000000;
+			color: white;
 			margin-bottom: 2.5rem;
 		  }
 
@@ -1818,7 +1817,7 @@ input, select, textarea {
 		  }
 
 		.grid-item {
-			background-color: #fff;
+			background-color: var(--color-darkGrey2);
 			border-radius: 0.4rem;
 			overflow:hidden; 
 			box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
@@ -1856,7 +1855,7 @@ input, select, textarea {
 	  }
 
 	  .GameInformation{
-		width: 50em;
+		width: 75%;
 		background-color:rgba(27, 31, 34, 0.85);
 		border-radius: 0.4rem;
 		overflow: hidden;
@@ -1864,7 +1863,7 @@ input, select, textarea {
 	  }
 
 	  .GameToolInfo{
-		width: auto;
+		width: 25%;
 		background-color:rgba(27, 31, 34, 0.85);
 		border-radius: 0.4rem;
 		overflow: hidden;
@@ -1874,8 +1873,9 @@ input, select, textarea {
 	  @media only screen and (max-width: 60em) {
 		.GameDetails{
 			margin-top: 1.5em;
-			display: grid;
-			width: auto;
+			display: flex;
+			flex-direction: column;
+			width: 100%;
 			/* grid-gap: 1rem; */
 			/* align-items: start; */
 			grid-template-columns: repeat(auto);
@@ -1883,11 +1883,19 @@ input, select, textarea {
 		  }
 
 		  .GameInformation{
-			width: auto;
+			width: 100%;
 			background-color:rgba(27, 31, 34, 0.85);
 			border-radius: 0.4rem;
 			overflow: hidden;
-			padding: 1rem 2rem 1rem .5rem;
+			padding: 1.4rem;
+		  }
+
+		  .GameToolInfo{
+			width: 100%;
+			background-color:rgba(27, 31, 34, 0.85);
+			border-radius: 0.4rem;
+			overflow: hidden;
+			padding: 1.4rem;
 		  }
 		  
 		  .Project-Heading{
@@ -1905,8 +1913,6 @@ input, select, textarea {
 	  }
 	  /* Info Cards */
 	  .skills-grid {
-		/* display: grid;
-		grid-template-columns: repeat(2,1fr); */
 		display: flex;
 		width: 100%;
 		height: auto;
@@ -1939,6 +1945,7 @@ input, select, textarea {
 		background-color:  var(--color-darkGrey2);
 		border-radius: .4rem;
 	  }
+
 	  .skills-banner {
 		margin-left: -1rem;
 		margin-bottom: 1rem;
@@ -1969,41 +1976,73 @@ input, select, textarea {
 	  }
 	  
 	  @media only screen and (max-width: 60em) {
-
+		.skills-grid {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			grid-gap: 0.1rem;		
+		}
+		
+		.skillList{
+			width: 100%;
+			height: 100%;
+		}
+		
+		.Softwares{
+			width: 100%;
+			height: 100%;
+		}
+		
+		.Languages{
+			width: 100%;
+			height: 100%;
+		}
+		
+		.hobbies{
+			width: 100%;
+			height: 100%;
+		}
+		
+		.skills-header {
+			margin-left: 1rem;
+			width: auto;
+			font-size: 1.2rem;
+			line-height: 1;
+			letter-spacing: 0.5rem;
+			color: #e9e9e9;
+			margin-bottom: 0.5rem;
+		}
 
 		.skills-text {
+			margin-left: 1rem;
 			font-size: 1rem;
 			letter-spacing: 0.1rem;
 			line-height: 1.7;
 			color: #fff;
 			margin-bottom: 2.5rem;
-		  }
-
-		body {
-		  padding: 3rem;
-		}
-	  
-		.skills-grid {
-			display: grid;
-			width: auto;
-			grid-template-columns: repeat(1,auto);
-			align-items: start;
-		    grid-gap: 1.2rem;		
 		}
 
-		.skills-content {
-			padding: 1.5rem;
-		  }
+		.skills-banner {
+			margin-right: -1.5rem;
+			margin-bottom: 1rem;
+			display: block;
+			background-color:  rgb(109, 17, 17);
+			height: 0.4rem;
+			border-top-left-radius: 0.4rem;
+			border-top-right-radius: 0.4rem; 
+			width: 118%;
+			padding-bottom: .5rem;
+		} 
 
-		
-
 		.skills-content {
-			background-color: #fff;
-			border-radius: 0.4rem;
+			margin-left: -1rem;
+			margin-bottom: 1rem;
+			align-items: center;
+			width: 115%;
+			padding: 0 0 1rem;
+			/* border-radius: 0.4rem; */
 			overflow:hidden; 
 			box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-			cursor: pointer;
-			transition: 0.2s;
 		}
 	  }
 
@@ -2012,6 +2051,7 @@ input, select, textarea {
 		display: grid;
 		grid-template-columns: repeat(1,1fr);
 		grid-gap: 0.5rem;
+		width: 100%;
 		
 	}
 
@@ -2213,6 +2253,10 @@ input, select, textarea {
 		color: var(--color-elementColor1);
 	}
 
-	
+	@media only screen and (max-width: 60em) {
+		.progress-bars{
+			width: max-content;
+		}
+	}
 
 
