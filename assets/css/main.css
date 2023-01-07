@@ -1859,7 +1859,7 @@ input, select, textarea {
 		background-color:rgba(27, 31, 34, 0.85);
 		border-radius: 0.4rem;
 		overflow: hidden;
-		padding: 1.2%;
+		padding: 1rem;
 	  }
 
 	  .GameToolInfo{
@@ -1867,8 +1867,20 @@ input, select, textarea {
 		background-color:rgba(27, 31, 34, 0.85);
 		border-radius: 0.4rem;
 		overflow: hidden;
-		padding: 1.2%;
-	  }
+		padding: 1rem;
+
+		}
+		
+		.game-info-banner{
+			margin-top: -1rem;
+			margin-left: -1rem;
+			margin-right: -2rem;
+			display: block;
+			background-color:  rgb(109, 17, 17);
+			height: 0.4rem;
+			width: auto;
+			padding-bottom: .5rem;
+		}
 
 	  @media only screen and (max-width: 60em) {
 		.GameDetails{
@@ -1887,7 +1899,7 @@ input, select, textarea {
 			background-color:rgba(27, 31, 34, 0.85);
 			border-radius: 0.4rem;
 			overflow: hidden;
-			padding: 1.4rem;
+			padding: 1rem;
 		  }
 
 		  .GameToolInfo{
@@ -1895,9 +1907,20 @@ input, select, textarea {
 			background-color:rgba(27, 31, 34, 0.85);
 			border-radius: 0.4rem;
 			overflow: hidden;
-			padding: 1.4rem;
+			padding: 1rem;
 		  }
 		  
+		  .game-info-banner{
+			margin-top: -1rem;
+			margin-left: -1rem;
+			margin-right: -2rem;
+			display: block;
+			background-color:  rgb(109, 17, 17);
+			height: 0.4rem;
+			width: auto;
+			padding-bottom: .5rem;
+		}
+
 		  .Project-Heading{
 			  font-size: 1.5rem;
 			  line-height: 1.4;
@@ -2040,7 +2063,6 @@ input, select, textarea {
 			align-items: center;
 			width: 115%;
 			padding: 0 0 1rem;
-			/* border-radius: 0.4rem; */
 			overflow:hidden; 
 			box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
 		}
@@ -2048,11 +2070,11 @@ input, select, textarea {
 
 	/* Skills Progressbar */
 	.progress-bars{
-		display: grid;
-		grid-template-columns: repeat(1,1fr);
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
 		grid-gap: 0.5rem;
-		width: 100%;
-		
+		/* width: 100%;*/
 	}
 
 	.progress-bar{
@@ -2254,8 +2276,8 @@ input, select, textarea {
 	}
 
 	@media only screen and (max-width: 60em) {
-		.progress-bars{
-			width: max-content;
+		.progress-con{
+			width: 95%;
 		}
 	}
 
