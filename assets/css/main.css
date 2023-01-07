@@ -2287,6 +2287,7 @@ input, select, textarea {
 
 /* Education Timeline */
 .timeline{
+	display: flex;
 	width:100%;
 	background-color:var(--color-darkGrey2);
 	color:#fff;
@@ -2295,6 +2296,7 @@ input, select, textarea {
 	margin-bottom: 1.5rem;
 
 }
+
 .timeline ul{
 	list-style-type:none;
 	margin-top: 1rem;;
@@ -2329,6 +2331,20 @@ input, select, textarea {
 	/* padding:5px 0px 15px 0px; */
 	font-size:15px;
 }
+
+.timeline ul li .content .bullet-points{
+	margin-top: -2rem;
+	padding-left: 1.5rem;
+	list-style: none;
+
+}
+
+.point-Marker{
+	margin-top: -1rem;
+	font-size: .3rem;
+	
+}
+
 .timeline ul li:before{
 	position:absolute;
 	content:'';
