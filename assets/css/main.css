@@ -2336,13 +2336,11 @@ input, select, textarea {
 	margin-top: -2rem;
 	padding-left: 1.5rem;
 	list-style: none;
-
 }
 
-.point-Marker{
+.bullet-point-icons{
 	margin-top: -1rem;
 	font-size: .3rem;
-	
 }
 
 .timeline ul li:before{
