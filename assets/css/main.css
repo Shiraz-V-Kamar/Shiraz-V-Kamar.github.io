@@ -2059,10 +2059,10 @@ input, select, textarea {
 		} 
 
 		.skills-content {
-			margin-left: -1rem;
+			/* margin-left: -1rem; */
 			margin-bottom: 1rem;
 			align-items: center;
-			width: 115%;
+			width: 100%;
 			padding: 0 0 1rem;
 			overflow:hidden; 
 			box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
@@ -2280,9 +2280,9 @@ input, select, textarea {
 		.progress-con{
 			width: 95%;
 		}
-		.premier-bar{
+		/* .premier-bar{
 			margin-left: -1.5rem;
-		}
+		} */
 	}
 
 /* Education Timeline */
