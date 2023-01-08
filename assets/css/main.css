@@ -2162,11 +2162,15 @@ input, select, textarea {
 		}
 
 		.skills-text {
+			/* padding-left:0.5rem ; */
 			font-size: 1rem;
 			letter-spacing: 0.1rem;
 			line-height: 1.7;
 			color: #fff;
 			margin-bottom: 2.5rem;
+		}
+		.slill-list-text{
+			padding-left: 0.5rem ;
 		}
 
 		.skills-banner {
@@ -2186,7 +2190,7 @@ input, select, textarea {
 			margin-bottom: 1rem;
 			align-items: center;
 			width: 100%;
-			/* padding: 1rem -.5rem 1rem; */
+			padding: 0rem 0.5rem 1rem;
 			overflow:hidden; 
 			box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
 		}
@@ -2231,10 +2235,10 @@ input, select, textarea {
 	.progress-title{
 		color: #ffffff;
 		font-weight: 600;
-		line-height: 1.5;
+		line-height: 0.5;
 		margin: 0 0 1rem 0;
 		text-transform: uppercase;
-		letter-spacing: 0.2rem;
+		letter-spacing: 0.1rem;
 	}
 
 	/* Skill 1 👇🏽*/
@@ -2256,7 +2260,9 @@ input, select, textarea {
 
 
 	.fa-circle{
-		font-size: 1rem;
+		font-size: .5rem;
+		/* padding-bottom: .5rem; */
+		font-variant-position:super;
 	}
 	/* .pythonLanguage{
 		text-decoration: underline 4px var(--color-elementColor1);
@@ -2423,22 +2429,19 @@ input, select, textarea {
 			font-size: 0.5rem;
 		}
 		.progress-title{
-			width: max-content;
+			width:100%;
 			color: #ffffff;
-			font-weight: 600;
-			line-height: 1.5;
-			margin: 0 1rem 1rem 0;
-			font-size: 1rem;
+			font-weight: .5rem;
+			line-height: 1.2;
+			font-size: 0.8rem;
 			text-transform: uppercase;
-			letter-spacing: 0.2rem;
+			letter-spacing: 0.1rem;
 		}
 		.premier-bars{
 			padding: -1rem;
 			width: 100%;
 		}
-		.skills-content{
-			/* padding: ; */
-		}
+	
 	}
 
 /* Education Timeline */
