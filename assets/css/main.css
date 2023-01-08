@@ -4,16 +4,16 @@
 :root{
 	--color-primary:  rgba(27, 31, 34, 0.85); /*Used for background*/
 	--color-accentColor: #4e040b ;
-	--color-accentColor2: #880714 ;
 	--color-accentColor3:#671313; /*Used for accent color*/
 	--color-elementColor0: #793232; /*Used for darker shade*/
 	--color-elementColor1: #875252; /*Used for light version of accent color*/
-	--color-elementColor2: #E65F78;
-	--color-elementColor3: #75C4BA;
-	--color-elementColor4: #A3CFF0;
-	--color-elementColor4: #FEE388;
-	--color-lightGrey: #716b6d;
-	--color-lightGrey:#808782; /*Used for lines and fills*/
+	--color-elementColor3: #1a7063;
+	--color-elementColor4: #36546a;
+	--color-elementColor5: #897a48;
+	--color-elementColor6: #872336;
+	--color-elementColor7: #137467;
+	--color-elementColor8: #476f8e;
+	--color-lightGrey: #716b6d; /*Used for lines and fills*/
 	--color-darkGrey2: #1a1e20; /*Used for cards*/
 
 	/* Colors in Template */
@@ -1790,10 +1790,11 @@ input, select, textarea {
 	  
 	  @media only screen and (max-width: 60em) {
 		.card-header {
-			font-size: 1.25em;
-			line-height: 1.5;
+			width:max-content ;
+			font-size: 1rem;
+			letter-spacing: 0.1rem;
 			color: white;
-			margin-bottom: 0.5rem;
+			margin-bottom: 1rem;
 		  }
 
 		.card-text {
@@ -1801,7 +1802,7 @@ input, select, textarea {
 			letter-spacing: 0.1rem;
 			line-height: 1.7;
 			color: white;
-			margin-bottom: 2.5rem;
+			margin-bottom: 1rem;
 		  }
 
 		body {
@@ -1837,11 +1838,11 @@ input, select, textarea {
 		}
 		.game-card-tag{
 			display:inline-block;
-			background-color:var(--color-elementColor0);
-			border-radius:2rem;
+			background-color:var(--color-elementColor8);
+			border-radius:0.25rem;
 			padding: 0.1rem 0.5rem 0.1rem;
 			margin-bottom: 0.5rem;
-			font-size:1rem;
+			font-size:0.8rem;
 			text-align:center;
 		  }
 	  }
@@ -1966,7 +1967,7 @@ input, select, textarea {
 		display: flex;
 		width: 100%;
 		height: auto;
-		padding: 1rem;
+		padding: 0 1rem 1rem;
 	  }
 	  
 	  .skillList{
@@ -2010,7 +2011,7 @@ input, select, textarea {
 	  } 
 	  
 	  .skills-header {
-		width: 100%;
+		width:fit-content;
 		font-size: 1.5rem;
 		line-height: 1.4;
 		letter-spacing: 0.5rem;
@@ -2025,7 +2026,7 @@ input, select, textarea {
 		color: #fff;
 		margin-bottom: 2.5rem;
 	  }
-	  @media screen and (max-width: 980px) { 
+	  /* @media screen and (max-width: 980px) { 
 		.skills-grid {
 			display: flex;
 			flex-direction: row;
@@ -2085,7 +2086,7 @@ input, select, textarea {
 		} 
 
 		.skills-content {
-			/* margin-left: -1rem; */
+			
 			margin-bottom: 1rem;
 			align-items: center;
 			width: 100%;
@@ -2093,7 +2094,7 @@ input, select, textarea {
 			overflow:hidden; 
 			box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
 		}
-	  }
+	  } */
 	  @media only screen and (max-width: 60em) {
 		.skills-grid {
 			display: flex;
@@ -2397,14 +2398,14 @@ input, select, textarea {
 			color: #ffffff;
 			font-weight: 600;
 			line-height: 1.5;
-			margin: 0 0 1rem 0;
+			margin: 0 1rem 1rem 0;
 			font-size: 0.6rem;
 			text-transform: uppercase;
 			letter-spacing: 0.2rem;
 		}
-		/* .premier-bar{
-			margin-left: -1.5rem;
-		} */
+		.premier-bars{
+			width: 100%;
+		}
 	}
 
 /* Education Timeline */
@@ -2487,7 +2488,7 @@ input, select, textarea {
 	/* background-color:rgb(255, 0, 0); */
 	/* box-shadow:0px 0px 10px 2px rgb(255, 0, 0); */
 }
-@media (max-width:300px){
+/* @media (max-width:300px){
 	.timeline{
 		width:100%;
 		padding: 1rem 0.5rem 1.5rem ;
@@ -2496,6 +2497,36 @@ input, select, textarea {
 		color:#e03434;
 		font-size:15px;
 	}
+	.timeline ul li span{
+		display:inline-block;
+		background-color:var(--color-elementColor0);
+		border-radius:2rem;
+		padding:0.5rem 1rem .5rem;
+		font-size:.3rem;
+		text-align:center;
+	}
 
+} */
+@media only screen and (max-width: 60em) {
+	.timeline{
+		width:100%;
+		padding: 1rem 0.5rem 1.5rem ;
+	}
+	.timeline ul li .content h3{
+		color: white;
+		/* font-size:17px; */
+		/* padding-top:5px; */
+		font-size: 1rem;
+		letter-spacing: 0.2rem;
+		padding-top: 0.2rem;
+		padding-left: 0.2rem;
+	}
+	.timeline ul li span{
+		display:inline-block;
+		background-color:var(--color-elementColor0);
+		border-radius:2rem;
+		padding:0.5rem 0.5rem .5rem;
+		font-size:.8rem;
+		text-align:left;
+	}
 }
-
