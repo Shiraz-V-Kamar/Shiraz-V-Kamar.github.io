@@ -2,17 +2,18 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
 :root{
-	--color-primary:  rgba(27, 31, 34, 0.85);
+	--color-primary:  rgba(27, 31, 34, 0.85); /*Used for background*/
 	--color-accentColor: #4e040b ;
 	--color-accentColor2: #880714 ;
-	--color-accentColor3:#671313;
-	--color-elementColor0: #793232;
-	--color-elementColor1: #875252;
-	--color-elementColor2: #ff847c;
-	--color-elementColor3: #cfa787;
-	--color-elementColor4: #99b898;
+	--color-accentColor3:#671313; /*Used for accent color*/
+	--color-elementColor0: #793232; /*Used for darker shade*/
+	--color-elementColor1: #875252; /*Used for light version of accent color*/
+	--color-elementColor2: #E65F78;
+	--color-elementColor3: #75C4BA;
+	--color-elementColor4: #A3CFF0;
+	--color-elementColor4: #FEE388;
 	--color-lightGrey: #716b6d;
-	--color-lightGrey:#808782;
+	--color-lightGrey:#808782; /*Used for lines and fills*/
 	--color-darkGrey2: #1a1e20; /*Used for cards*/
 
 	/* Colors in Template */
@@ -1716,29 +1717,39 @@ input, select, textarea {
 	  .card-img {
 		display: block;
 		width: 100%;
-		height: 20rem;
+		height: 15rem;
 		object-fit: cover;
 	  }
 	  
 	  .card-content {
-		padding: 3rem;
+		padding: 1rem 1.5rem 2rem;
 	  }
 	  
 	  .card-header {
 		border-bottom: solid 1px #ffffff;
 		width: max-content;
 		padding-bottom: 0.5rem;
-		margin: 0 0 2rem 0;
+		margin: 0 0 1rem 0;
 		font-size: 1.5rem;
 		line-height: 1.4;
-		letter-spacing: 0.5rem;
+		letter-spacing: 0.4rem;
 		color: #ffffff;
 		margin-bottom: 1.5rem;
 	  }
 	  
+	  .game-card-tag{
+		display:inline-block;
+		background-color:var(--color-elementColor0);
+		border-radius:2rem;
+		padding: 0.1rem 0.5rem 0.1rem;
+		margin-bottom: 0.5rem;
+		font-size:15px;
+		text-align:center;
+	  }
+	  
 	  .card-text {
 		/* display: flex; */
-		font-size: 1.6rem;
+		font-size: 1rem;
 		letter-spacing: 0.1rem;
 		line-height: 1.7;
 		color: #ffffff;
@@ -1824,6 +1835,15 @@ input, select, textarea {
 			cursor: pointer;
 			transition: 0.2s;
 		}
+		.game-card-tag{
+			display:inline-block;
+			background-color:var(--color-elementColor0);
+			border-radius:2rem;
+			padding: 0.1rem 0.5rem 0.1rem;
+			margin-bottom: 0.5rem;
+			font-size:1rem;
+			text-align:center;
+		  }
 	  }
 
 	/* Works/GamePage */
@@ -1857,6 +1877,7 @@ input, select, textarea {
 	  .GameInformation{
 		width: 75%;
 		background-color:rgba(27, 31, 34, 0.85);
+		box-shadow: 0 0 .5rem rgba(0,0,0,.5);
 		border-radius: 0.4rem;
 		overflow: hidden;
 		padding: 1rem;
@@ -1865,10 +1886,16 @@ input, select, textarea {
 	  .GameToolInfo{
 		width: 25%;
 		background-color:rgba(27, 31, 34, 0.85);
+		box-shadow: 0 0 .5rem rgba(0,0,0,.5);
 		border-radius: 0.4rem;
 		overflow: hidden;
 		padding: 1rem;
 
+		}
+
+		.spaced-list{
+			margin-left: 1.5rem;
+			
 		}
 		
 		.game-info-banner{
@@ -1939,7 +1966,7 @@ input, select, textarea {
 		display: flex;
 		width: 100%;
 		height: auto;
-		padding: 0.5rem;
+		padding: 1rem;
 	  }
 	  
 	  .skillList{
@@ -1983,7 +2010,7 @@ input, select, textarea {
 	  } 
 	  
 	  .skills-header {
-		width: max-content;
+		width: 100%;
 		font-size: 1.5rem;
 		line-height: 1.4;
 		letter-spacing: 0.5rem;
@@ -1998,39 +2025,38 @@ input, select, textarea {
 		color: #fff;
 		margin-bottom: 2.5rem;
 	  }
-	  
-	  @media only screen and (max-width: 60em) {
+	  @media screen and (max-width: 980px) { 
 		.skills-grid {
 			display: flex;
-			flex-direction: column;
+			flex-direction: row;
 			width: 100%;
-			grid-gap: 0.1rem;		
+			grid-gap: 1rem;		
 		}
 		
 		.skillList{
-			width: 100%;
+			width: 50%;
 			height: 100%;
 		}
 		
 		.Softwares{
-			width: 100%;
+			width: 50%;
 			height: 100%;
 		}
 		
 		.Languages{
-			width: 100%;
+			width: 50%;
 			height: 100%;
 		}
 		
 		.hobbies{
-			width: 100%;
+			width: 50%;
 			height: 100%;
 		}
 		
 		.skills-header {
 			margin-left: 1rem;
 			width: auto;
-			font-size: 1.2rem;
+			font-size: 1rem;
 			line-height: 1;
 			letter-spacing: .5rem;
 			color: #e9e9e9;
@@ -2068,12 +2094,82 @@ input, select, textarea {
 			box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
 		}
 	  }
+	  @media only screen and (max-width: 60em) {
+		.skills-grid {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			grid-gap: 0.1rem;		
+		}
+		
+		.skillList{
+			width: 100%;
+			height: 100%;
+		}
+		
+		.Softwares{
+			width: 100%;
+			height: 100%;
+		}
+		
+		.Languages{
+			width: 100%;
+			height: 100%;
+		}
+		
+		.hobbies{
+			width: 100%;
+			height: 100%;
+		}
+		
+		.skills-header {
+			margin-left: 1rem;
+			width: auto;
+			font-size: 0.9rem;
+			line-height: 1;
+			letter-spacing: .5rem;
+			color: #e9e9e9;
+			margin-bottom: 1.5rem;
+		}
+
+		.skills-text {
+			margin-left: 2rem;
+			font-size: 1rem;
+			letter-spacing: 0.1rem;
+			line-height: 1.7;
+			color: #fff;
+			margin-bottom: 2.5rem;
+		}
+
+		.skills-banner {
+			margin-right: -1.5rem;
+			margin-bottom: 1rem;
+			display: block;
+			background-color:  rgb(109, 17, 17);
+			height: 0.4rem;
+			border-top-left-radius: 0.4rem;
+			border-top-right-radius: 0.4rem; 
+			width: 118%;
+			padding-bottom: .5rem;
+		} 
+
+		.skills-content {
+			/* margin-left: -1rem; */
+			margin-bottom: 1rem;
+			align-items: center;
+			width: 100%;
+			padding: 0 0 1rem;
+			overflow:hidden; 
+			box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+		}
+	  }
+	
 
 	/* Skills Progressbar */
 	.progress-bars{
 		display: flex;
 		flex-direction: column;
-		flex-wrap: wrap;
+		/* flex-wrap: wrap; */
 		grid-gap: 0.5rem;
 		/* width: 100%;*/
 	}
@@ -2085,7 +2181,7 @@ input, select, textarea {
 
 	.progress-con{
 		display: flex;
-		align-items: center;
+		/* align-items: center; */
 		margin-bottom: 1rem;
 	}
 
@@ -2104,6 +2200,15 @@ input, select, textarea {
 		transition-delay: all .4 ease-in-out;
 	}
 
+	.progress-title{
+		color: #ffffff;
+		font-weight: 600;
+		line-height: 1.5;
+		margin: 0 0 1rem 0;
+		text-transform: uppercase;
+		letter-spacing: 0.2rem;
+	}
+
 	/* Skill 1 👇🏽*/
 	.csharp-bar{
 		background-color: var(--color-accentColor3);
@@ -2119,6 +2224,11 @@ input, select, textarea {
 	}
 	.python-Marker{
 		color: var(--color-elementColor1);
+	}
+
+
+	.fa-circle{
+		font-size: 1rem;
 	}
 	/* .pythonLanguage{
 		text-decoration: underline 4px var(--color-elementColor1);
@@ -2280,6 +2390,18 @@ input, select, textarea {
 		.progress-con{
 			width: 95%;
 		}
+		.fa-circle{
+			font-size: 0.5rem;
+		}
+		.progress-title{
+			color: #ffffff;
+			font-weight: 600;
+			line-height: 1.5;
+			margin: 0 0 1rem 0;
+			font-size: 0.6rem;
+			text-transform: uppercase;
+			letter-spacing: 0.2rem;
+		}
 		/* .premier-bar{
 			margin-left: -1.5rem;
 		} */
@@ -2299,9 +2421,10 @@ input, select, textarea {
 
 .timeline ul{
 	list-style-type:none;
-	margin-top: 1rem;;
+	margin-top: 1rem;
 	border-left:2px solid var(--color-lightGrey);
-	padding:10px 5px;
+	/* padding:10px 5px; */
+	padding:0 0.3rem 0 ;
 }
 .timeline ul li{
 	padding:20px 20px;
@@ -2312,11 +2435,13 @@ input, select, textarea {
 .timeline ul li span{
 	display:inline-block;
 	background-color:var(--color-elementColor0);
-	border-radius:25px;
-	padding:2px 5px;
+	border-radius:2rem;
+	padding:0.5rem 1rem .5rem;
 	font-size:15px;
 	text-align:center;
 }
+
+
 .timeline ul li .content h3{
 	color: white;
 	/* font-size:17px; */
