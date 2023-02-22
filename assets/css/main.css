@@ -2566,3 +2566,99 @@ input, select, textarea {
 		text-align:left;
 	}
 }
+
+/* Testing ScreenShot feature */
+/* Style the gallery images */
+.gallery img {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  /* Style the lightbox container
+  .lightbox {
+	display: none;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  Style the lightbox image
+  .lightbox-image {
+	display: block;
+	margin: auto;
+	max-width: 100%;
+	max-height: 80vh;
+  } */
+  #lightbox {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	z-index: 9999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	flex-direction: column;
+  }
+  
+  #lightbox-image {
+	display: block;
+	max-width: 100%;
+	max-height: auto;
+	padding: 10rem 0 0  0;
+	align-items:flex-end
+  }
+  /* Style the lightbox previous and next buttons */
+  .lightbox-prev, .lightbox-next {
+	position: absolute;
+	top: 50%;
+	margin-top: -30px;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+	padding: 5px 10px;
+	cursor: pointer;
+  }
+  
+  .lightbox-prev {
+	left: 0;
+  }
+  
+  .lightbox-next {
+	right: 0;
+  }
+  
+  /* Style the lightbox close button */
+  .lightbox-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+	padding: 5px 10px;
+	cursor: pointer;
+  }
+  
+  /* Style the gallery container */
+  .gallery {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  /* Style the gallery images */
+  .gallery img {
+	width: 300px;
+	height: 200px;
+	margin: 10px;
+	object-fit: cover;
+	cursor: pointer;
+  }
