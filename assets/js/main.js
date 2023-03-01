@@ -3,52 +3,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
-var images = document.querySelectorAll(".gallery img");
-var currentIndex = 0;
-
-// Function to open the lightbox
-function openLightbox(imageUrl, index) {
-  // Set the image source to the clicked image
-  document.getElementById("lightbox-image").src = imageUrl;
-  currentIndex = index;
-
-  // Show the lightbox
-  document.getElementById("lightbox").style.display = "block";
-}
-
-// Function to close the lightbox
-function closeLightbox() {
-  // Hide the lightbox
-  document.getElementById("lightbox").style.display = "none";
-}
-
-// Function to show the previous image
-function prevImage() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  document.getElementById("lightbox-image").src = images[currentIndex].src;
-}
-
-// Function to show the next image
-function nextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  document.getElementById("lightbox-image").src = images[currentIndex].src;
-}
-
-// Attach the click event to each image
-for (var i = 0; i < images.length; i++) {
-  images[i].addEventListener("click", function() {
-    openLightbox(this.src, Array.prototype.indexOf.call(images, this));
-  });
-  
-  // Add the onload event to each image
-  images[i].addEventListener("load", function() {
-    if (this.src === document.getElementById("lightbox-image").src) {
-      document.getElementById("lightbox").style.display = "block";
-    }
-  });
-}
-
 (function($) {
 
 	var	$window = $(window),
