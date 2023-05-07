@@ -291,11 +291,36 @@
 				var $this = $(this);
 
 				// Close.
-					$('<div class="close">Close</div>')
-						.appendTo($this)
-						.on('click', function() {
-							location.hash = '';
-						});
+					// $('<div class="close">Close</div>')
+					// 	.appendTo($this)
+					// 	.on('click', function() {
+					// 		window.location.href = 'index.html';
+					// 	});
+
+					// Check if the current article is the one you want to modify.
+					if ($this.hasClass('Games')) {
+						// Add special behavior for the close button in this article.
+						$('<div class="close">Special Close</div>')
+							.appendTo($this)
+							.on('click', function() {
+								window.location.href = 'Works.html#Works';
+							});
+					}else if ($this.hasClass('ExtraWorks')) {
+						// Add special behavior for the close button in this article.
+						$('<div class="close">Special Close</div>')
+							.appendTo($this)
+							.on('click', function() {
+								window.location.href = 'OtherWorks.html#ArtWorks';
+							});
+					} else {
+						// Add default behavior for the close button in other articles.
+						$('<div class="close">Close</div>')
+							.appendTo($this)
+							.on('click', function() {
+								window.location.href = 'index.html';
+							});
+					}
+
 
 				// Prevent clicks from inside article from bubbling.
 					$this.on('click', function(event) {
