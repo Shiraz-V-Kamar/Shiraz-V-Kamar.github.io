@@ -303,14 +303,14 @@
 						$('<div class="close">Special Close</div>')
 							.appendTo($this)
 							.on('click', function() {
-								window.location.href = 'Works.html#Works';
+								window.location.href = '#Works';
 							});
 					}else if ($this.hasClass('ExtraWorks')) {
 						// Add special behavior for the close button in this article.
 						$('<div class="close">Special Close</div>')
 							.appendTo($this)
 							.on('click', function() {
-								window.location.href = 'OtherWorks.html#ArtWorks';
+								window.location.href = '#ArtWorks';
 							});
 					} else {
 						// Add default behavior for the close button in other articles.
