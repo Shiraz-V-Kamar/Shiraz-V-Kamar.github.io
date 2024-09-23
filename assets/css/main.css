@@ -1873,6 +1873,28 @@ input, select, textarea {
 		  }
 	  }
 
+	/* Filtering Button */
+	.filter-buttons {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	
+	.filter-btn {
+		background-color: #875252;
+		color: white;
+		border: none;
+		padding: 10px 20px;
+		cursor: pointer;
+		margin: 5px;
+		transition: background-color 0.3s;
+	}
+	
+	.filter-btn.active,
+	.filter-btn:hover {
+		background-color: #4e040b;
+	}
+	
+
 	/* Works/GamePage */
 	  /* Game Video */
 	  .Game-video{
@@ -2565,6 +2587,27 @@ input, select, textarea {
 		font-size:1rem;
 		text-align:left;
 	}
+}
+
+/* Adding the back to top button */
+.back-to-top {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.top-btn {
+    background-color: #875252;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.top-btn:hover {
+    background-color: #4e040b;
 }
 
 /* Testing ScreenShot feature */

@@ -30,6 +30,8 @@
 			}, 100);
 		});
 
+
+
 	// Fix: Flexbox min-height bug on IE.
 		if (browser.name == 'ie') {
 
@@ -285,6 +287,40 @@
 
 			};
 
+		// Button Filtering Logic
+		document.addEventListener("DOMContentLoaded", function () {
+			const filterButtons = document.querySelectorAll(".filter-btn");
+			const gridItems = document.querySelectorAll(".grid-item");
+		
+			filterButtons.forEach(button => {
+				button.addEventListener("click", () => {
+					const filter = button.getAttribute("data-filter");
+		
+					// Loop through each grid item
+					gridItems.forEach(item => {
+						// Show all items if filter is "all"
+						if (filter === "all") {
+							item.style.display = "block";
+						} else {
+							// Check if the item contains the class for the selected filter
+							if (item.classList.contains(filter)) {
+								item.style.display = "block";
+							} else {
+								item.style.display = "none";
+							}
+						}
+					});
+		
+					// Update button styles (optional)
+					filterButtons.forEach(btn => btn.classList.remove("active"));
+					button.classList.add("active");
+				});
+			});
+		});
+		
+
+		
+
 		// Articles.
 			$main_articles.each(function() {
 
@@ -421,5 +457,19 @@
 					$window.on('load', function() {
 						$main._show(location.hash.substr(1), true);
 					});
+
+		// Adding Back to Top functionality
+		document.addEventListener("DOMContentLoaded", function () {
+			const topButtons = document.querySelectorAll(".top-btn");
+		
+			topButtons.forEach(button => {
+				button.addEventListener("click", function() {
+					const targetSection = document.querySelector(button.getAttribute("data-target"));
+					
+					// Scroll smoothly to the top of the section
+					targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+				});
+			});
+		});
 
 })(jQuery);
