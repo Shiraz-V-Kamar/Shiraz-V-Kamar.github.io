@@ -2685,37 +2685,52 @@ input, select, textarea {
 /* Adding Global buttons */
 /* Styling for the buttons in the game articles */
 .article-navbar {
-	text-align: center;
-	margin-bottom: 1.5rem; /* Add space between buttons and article content */
-  }
-  
-  .article-navbar ul {
-	display: flex;
-	justify-content: center;
-	list-style: none;
-	padding: 0;
-  }
-  
-  .article-navbar ul li {
-	margin: 0 1rem;
-  }
-  
-  .article-navbar ul li a {
-	text-transform: uppercase;
-	text-decoration: none;
-	color: #ffffff; /* White text */
-	font-weight: bold;
-	padding: 0.5rem 1.25rem; /* Same padding as header buttons */
-	border: solid 1px #ffffff; /* Border to match the button style */
-	border-radius: 4px;
-	transition: background-color 0.3s ease;
-  }
-  
-  .article-navbar ul li a:hover {
-	background-color: rgba(255, 255, 255, 0.075); /* Hover effect */
-  }
-  
-  .article-navbar ul li a:active {
-	background-color: rgba(255, 255, 255, 0.175); /* Active state effect */
-  }
+    text-align: center;
+    margin-bottom: 1.5rem; /* Add space between buttons and article content */
+}
+
+.article-navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap; /* Allow wrapping of items on smaller screens */
+}
+
+.article-navbar ul li {
+    margin: 0 1rem;
+}
+
+/* Style for the links */
+.article-navbar ul li a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff; /* White text */
+    font-weight: bold;
+    padding: 0.5rem 1.25rem; /* Same padding as header buttons */
+    border: solid 1px #ffffff; /* Border to match the button style */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover and active effects */
+.article-navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.075); /* Hover effect */
+}
+
+.article-navbar ul li a:active {
+    background-color: rgba(255, 255, 255, 0.175); /* Active state effect */
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .article-navbar ul {
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center; /* Center them */
+    }
+
+    .article-navbar ul li {
+        margin: 0.5rem 0; /* Adjust margin for vertical stacking */
+    }
+}
 /* Testing ScreenShot feature */
