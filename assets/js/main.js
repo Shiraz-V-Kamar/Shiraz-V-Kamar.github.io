@@ -472,4 +472,48 @@
 			});
 		});
 
+		// Adding Horizontal Game Bar Auto populating
+		document.addEventListener("DOMContentLoaded", function () {
+			const games = document.querySelectorAll('.game-item'); // Find all game items in the HTML
+			const carouselContainer = document.querySelector('.game-container'); // The carousel container
+		
+			// Loop through all games and create a corresponding item in the carousel
+			games.forEach(game => {
+				const gameImg = game.querySelector('img'); // Get the image inside the child div
+				const gameTitle = game.getAttribute('data-title'); // Get the game title
+				const gameImgSrc = gameImg.getAttribute('data-src'); // Get the 'data-src' attribute for lazyload images
+		
+				// Create a new div for the game in the carousel
+				const newGameDiv = document.createElement('div');
+				newGameDiv.classList.add('game-item'); // Add the class 'game-item' to the new div
+				newGameDiv.innerHTML = `
+					<img src="${gameImgSrc}" alt="${gameTitle}">
+					<h3>${gameTitle}</h3>
+				`;
+		
+				// Reuse the existing onclick event from the game item
+				newGameDiv.onclick = game.querySelector('.card').onclick;
+		
+				// Append the new game item to the carousel
+				carouselContainer.appendChild(newGameDiv);
+			});
+		
+			// Scrolling logic for left and right buttons
+			window.scrollCarouselLeft = function () {
+				const container = document.querySelector('.game-container');
+				container.scrollBy({
+					left: -container.offsetWidth / 2, // Scroll half the width of the container to the left
+					behavior: 'smooth'
+				});
+			};
+		
+			window.scrollCarouselRight = function () {
+				const container = document.querySelector('.game-container');
+				container.scrollBy({
+					left: container.offsetWidth / 2, // Scroll half the width of the container to the right
+					behavior: 'smooth'
+				});
+			};
+		});
+		
 })(jQuery);

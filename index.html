@@ -48,9 +48,6 @@
 								<li><a href="#Works">Games</a></li>
 								<li><a href="#ArtWorks">Extras</a></li>
 								<li><a href="#contact">Contact</a></li>
-								
-								<!-- <li><a href="#elements">Elements</a></li> -->
-								
 							</ul>
 						</nav>
 					</header>
@@ -377,6 +374,16 @@
 
 							<!-- Works -->
 							<article id="Works" class="Works">
+								<br>
+								<nav class="article-navbar use-middle">
+									<ul>
+									  <li><a href="#about">About</a></li>
+									  <li><a href="#games">Games</a></li>
+									  <li><a href="#extras">Extras</a></li>
+									  <li><a href="#contact">Contact</a></li>
+									</ul>
+								  </nav>
+								</nav>
 								<h2 class="major">Works</h2>
 								<span class="image main"><img class="lazyload" data-src="images/Game Banner.png" alt="Game Banner" /></span>
 								<div style="text-align: center;">
@@ -517,9 +524,10 @@
 								<h3  class="major">Personal Projects</h3>
 								<div class="grid">
 									<!-- card 1 -->
-									<div class="grid-item prototypes">
+									 <div class="grid-item prototypes game-item" data-title="Frankenstein"> <!-- Added data-tiitle and game-item to auto populate the games in horizontal bar -->
 										<div class="card" onclick="Frankenstein()">
-										  <img
+										  
+											<img
 											class="card-img lazyload"
 											data-src="./images/I-Frankenstein/Frankenstein Thumbnail Temp.png"
 											alt="I-Frankenstein Banner Pic"
@@ -574,7 +582,7 @@
 									</div>
 
 									<!-- card 2 -->
-									<div class="grid-item full">
+									<div class="grid-item full game-item" data-title="The Elementals">
 									  <div class="card" onclick="Game2()">
 										<img
 										  class="card-img lazyload"
@@ -631,7 +639,7 @@
 									</div>
 
 									<!-- Card 3 -->
-									<div class="grid-item full">
+									<div class="grid-item full game-item" data-title="HolySouls">
 									  <div class="card" onclick="HolySouls()">
 										<img class="card-img lazyload" data-src="./images/Holy Souls/Holy Souls Banner.png" alt="Holy Souls Banner Pic" />
 										<div class="card-content">
@@ -737,7 +745,7 @@
 									</div> -->
 
 									<!-- Card 5 -->
-									<div class="grid-item full">
+									<div class="grid-item full game-item" data-title="ARBirthdayGift">
 										<div class="card" onclick="ARBirthdayGift()">
 										  <img class="card-img lazyload" data-src="./images/AR Birthday Gift/ARBirthdayGift Screenshot.png" alt="Maldives" />
 										  <div class="card-content">
@@ -790,7 +798,7 @@
 									</div>
 
 									<!-- Card 6 -->
-									<div class="grid-item prototypes">
+									<div class="grid-item prototypes game-item" data-title="DigThrough">
 										<div class="card" onclick="DigThrough()">
 										  <img class="card-img lazyload" data-src="./images/Dig Through/Dig Through Thumbnail.png" alt="Dig Through Thumbnail Pic" />
 										  <div class="card-content">
@@ -843,7 +851,7 @@
 									</div>
 
 									<!-- Card 7 -->
-									<div class="grid-item prototypes">
+									<div class="grid-item prototypes game-item" data-title="SoundScapes" >
 										<div class="card" onclick="SoundScapes()">
 										  <img class="card-img lazyload" data-src="./images/SoundScapes/Sound Scape.PNG" alt="Sound Scapes Card Pic" />
 										  <div class="card-content">
@@ -950,7 +958,7 @@
 									  </div> -->
 
 									  <!-- Card 9 -->
-									<div class="grid-item mechanic">
+									<div class="grid-item mechanic game-item" data-title="InventorySystem">
 										<div class="card" onclick="InventorySystem()">
 										  <img class="card-img lazyload" data-src="./images/Inventory/Inventory Thumbnail Temp.png" alt="Rome" />
 										  <div class="card-content">
@@ -1003,7 +1011,7 @@
 									  </div>
 
 									   <!-- Card 10 -->
-									<div class="grid-item mechanic">
+									<div class="grid-item mechanic game-item" data-title="GrapplingHook">
 										<div class="card" onclick="GrapplingHook()">
 										  <img class="card-img lazyload" data-src="./images/Grappling Hook/Grappling hook banner.png" alt="Rome" />
 										  <div class="card-content">
@@ -1064,11 +1072,28 @@
 
 						<!-- Games Starts here -->
 						<article id="I-Frankenstein" class="Games">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">I-Frankenstein</h2>
 							<span class="image main"><img class="lazyload" data-src="images/I-Frankenstein/Frankenstein Game Banner.png" alt="" /></span>
 							<div class="Game-video">
 								<iframe class="lazyload" width="560" height="315" src="https://www.youtube.com/embed/KdBZage87M8?si=1EBiQUfAE4kKaWjD" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							    </div>
+								<div class="game-carousel">
+									<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
+									<div class="game-container">
+										<!-- JavaScript will dynamically populate this area with game items -->
+									</div>
+									<button class="carousel-nav right" onclick="scrollCarouselRight()">&#9654;</button>
+								</div>
+								<br>
 								<div class="GameDetails">
 									<div class="GameInformation">
 										<div class="game-info-banner"></div>
@@ -1171,6 +1196,15 @@
 							</article>
 
 						<article id="TheElementals" class="Games">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">The Elementals</h2>
 							<span class="image main"><img class="lazyload" data-src="images/The elementals/Banner Pic 2.png" alt="" /></span>
 							<div class="Game-video">
@@ -1276,6 +1310,15 @@
 							</article>
 
 						<article id="HolySouls" class="Games">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 								<h2 class="Project-Heading">Holy Souls</h2>
 								<span class="image main"><img class="lazyload" data-src="images/Holy Souls/Holy Souls Banner 2.png" alt="" /></span>
 								<div class="Game-video">
@@ -1367,6 +1410,15 @@
 							</article>
 
 						<article id="EndlessShooter" class="Games">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 								<h2 class="Project-Heading">Endless Survival Shooter</h2>
 								<span class="image main"><img class="lazyload" data-src="images/Endless Shooter/Banner Pic 2.png" alt="" /></span>
 								<div class="Game-video">
@@ -1450,7 +1502,17 @@
 							</article>
 							
 						<article id="ARBirthdayGift" class="Games">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 								<h2 class="Project-Heading">AR Birthday Gift</h2>
+								
 								<span class="image main"><img class="lazyload" data-src="images/AR Birthday Gift/ARBirthdayGift.png" alt="" /></span>
 								<div class="Game-video">
 									<iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/rZUOGaFCnyY" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -1542,6 +1604,15 @@
 							</article>
 
 						<article id="SoundScapes" class="Games">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Sound Scapes</h2>
 							<span class="image main"><img class="lazyload" data-src="images/SoundScapes/SoundScapesGame Banner.png" alt="" /></span>
 							<div class="Game-video">
@@ -1626,6 +1697,15 @@
 						</article>
 
 						<article id="FolkArt" class="Games">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 								<h2 class="Project-Heading">Folk Art Project</h2>
 								<span class="image main"><img class="lazyload" data-src="images/FolkArt//FolkArt Banner.png" alt="" /></span>
 								<div class="Game-video">
@@ -1721,6 +1801,15 @@
 
 						
 						<article id="DigThrough" class="Games">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Dig Through</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Dig Through/Dig Through Bannerl.png" alt="Dig Through Banner image" /></span>
 							<div class="Game-video">
@@ -1818,7 +1907,16 @@
 							
 						</article>
 
-						<article id="InventorySystem" class="Games">
+						<article id="InventorySystem" class="Games">		
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Inventory System</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Game Banner Prototype.png" alt="Inventory System image" /></span>
 							<div class="Game-video">
@@ -1903,6 +2001,15 @@
 						</article>
 
 						<article id="GrapplingHook" class="Games">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Grappling Hook</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Game Banner Prototype.png" alt="Grappling Hook image" /></span>
 							<div class="Game-video">
@@ -1989,6 +2096,15 @@
 
 						<!-- Games from Game Studio -->
 						<article id="Mayanagari" class="Games">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Mayanagari</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Mayanagari/Mayanagari Banner.png" alt="Inventory System image" /></span>
 							<div class="Game-video">
@@ -2055,6 +2171,15 @@
 						</article>
 
 						<article id="DojoDefenders" class="Games">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Dojo Defenders</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Dojo Defenders/Dojo Defender Banner.png" alt="Inventory System image" /></span>
 							<div class="Game-video">
@@ -2126,6 +2251,15 @@
 
 						<!-- Other Works --> 
 						<article id="ArtWorks" class="ArtWorks">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="major">Other Works</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Other Work Banner.png" alt="Other Works Banner Pic" /></span>
 							<h3 class="major">2D Works</h3>
@@ -2511,6 +2645,15 @@
 
 						<!-- Other Works Starts here -->
 						<article id="RevyFanArt" class="ExtraWorks">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Revy FanArt</h2>
 							<span class="image main"><img class="lazyload" data-src="./images/Other Works/2D/RevyFanart/image.jpg" alt="Revy Black Lagoon" /></span>
 
@@ -2551,6 +2694,15 @@
 						</article>
 
 						<article id="EmmaFanArt" class="ExtraWorks">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Emma FanArt</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Other Works/2D/Emma FanArt/yokusoku_no_Neverland_with_copyright.jpg" alt="" /></span>
 
@@ -2591,6 +2743,15 @@
 						</article>
 
 						<article id="HimikoFanArt" class="ExtraWorks">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Emma FanArt</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Other Works/2D/Himiko FanArt/my hero academia_with_copyright.jpg" alt="" /></span>
 
@@ -2631,6 +2792,15 @@
 						</article>
 
 						<article id="MountMiyoboku" class="ExtraWorks">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Mount Myōboku</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Other Works/2D/MountMiyoboku Environment/Mount miyaboku rvj submission 2.png" alt="" /></span>
 
@@ -2666,6 +2836,15 @@
 						</article>
 
 						<article id="Lilith" class="ExtraWorks">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Lilith</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Other Works/2D/Lilith/Lilith 2.png" alt="" /></span>
 
@@ -2700,6 +2879,15 @@
 						
 						<!-- 3D Starts here -->
 						<article id="ItachiVsSasuke" class="ExtraWorks">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Itachi Vs Sasuke</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Other Works/3D/Itachi vs Sasuke/Maya output render  13.png" alt="" /></span>
 							<!-- <br> -->
@@ -2740,6 +2928,15 @@
 						</article>
 
 						<article id="DemonLord" class="ExtraWorks">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Demon Lord</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Other Works/3D/Goat king/Final render.jpg" alt="" /></span>
 							<!-- <br> -->
@@ -2778,6 +2975,15 @@
 						</article>
 
 						<article id="HidanWeapon" class="ExtraWorks">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Triple-Bladed Scythe</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Other Works/3D/Hiddan weapon/Render version 2 - 3.png" alt="" /></span>
 							<!-- <br> -->
@@ -2818,6 +3024,15 @@
 						</article>
 
 						<article id="HealthPotion" class="ExtraWorks">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#games">Games</a></li>
+								  <li><a href="#extras">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
 							<h2 class="Project-Heading">Health Potion</h2>
 							<span class="image main"><img class="lazyload" data-src="images/Other Works/3D/Mug Render/Mug Render Dynamic 1.jpg" alt="" /></span>
 							<!-- <br> -->

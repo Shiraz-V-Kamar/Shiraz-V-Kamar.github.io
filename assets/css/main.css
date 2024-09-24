@@ -1790,7 +1790,7 @@ input, select, textarea {
 		font-size: 1rem;
 		text-align: center;
 		color: #601212;
-		background-color: #875252;
+		/* background-color: #875252; */
 		border: none;
 		border-radius: 0.4rem;
 		transition: 0.2s;
@@ -1806,7 +1806,8 @@ input, select, textarea {
 	  .card-btn:hover,
 	  .card-btn:active {
 		/* background-color: #390a0a; */
-		background-color: var(--color-accentColor);
+		/* background-color: #390a0a; */
+		background-color: var(accentColorFirstTry);
 	  }
 	  
 	  .card-btn:hover span,
@@ -1876,11 +1877,11 @@ input, select, textarea {
 	/* Filtering Button */
 	.filter-buttons {
 		text-align: center;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 	
 	.filter-btn {
-		background-color: #875252;
+		background-color: var(--color-backgroundColor);
 		color: white;
 		border: none;
 		padding: 10px 20px;
@@ -1891,7 +1892,7 @@ input, select, textarea {
 	
 	.filter-btn.active,
 	.filter-btn:hover {
-		background-color: #4e040b;
+		background-color: var(--color-lightGrey);
 	}
 	
 
@@ -2596,18 +2597,125 @@ input, select, textarea {
 }
 
 .top-btn {
-    background-color: #875252;
+    /* Center the text horizontally and vertically */
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    margin: 5px;
+    margin: 5px auto; /* Center the button itself */
     transition: background-color 0.3s;
     font-size: 14px;
+
+    /* Flexbox for vertical and horizontal text centering */
+    display: flex;
+    justify-content: center; /* Horizontally center the text */
+    align-items: center; /* Vertically center the text */
 }
 
 .top-btn:hover {
-    background-color: #4e040b;
+    background-color: var(accentColorFirstTry);
 }
 
+/* Adding Horizontal Game Bar styling */
+.game-carousel {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* Adjust the container to add padding for nav buttons */
+.game-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    white-space: nowrap; /* Ensures items don't wrap and stay horizontal */
+    padding: 0 50px; /* Add padding to the left and right to prevent overlapping */
+    box-sizing: border-box;
+}
+
+.game-item {
+    min-width: 200px; /* Adjust size based on your game thumbnails */
+    margin-right: 20px;
+    text-align: center;
+}
+
+.game-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Carousel navigation button styling */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--color-backgroundColor); /* Set button background color */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Ensure buttons are above the container */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Horizontally center the icon */
+    align-items: center; /* Vertically center the icon */
+}
+
+.carousel-nav.left {
+    left: 10px; /* Adjust the position slightly away from the edge */
+}
+
+.carousel-nav.right {
+    right: 10px; /* Adjust the position slightly away from the edge */
+}
+
+/* Hover effect for nav buttons */
+.carousel-nav:hover {
+    background-color: var(--color-lightGrey); /* Set hover background */
+}
+
+/* Optional: Make sure the icon inside the button is centered */
+.carousel-nav i {
+    font-size: 20px; /* Adjust size as needed */
+}
+
+/* Adding Global buttons */
+/* Styling for the buttons in the game articles */
+.article-navbar {
+	text-align: center;
+	margin-bottom: 1.5rem; /* Add space between buttons and article content */
+  }
+  
+  .article-navbar ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+  }
+  
+  .article-navbar ul li {
+	margin: 0 1rem;
+  }
+  
+  .article-navbar ul li a {
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #ffffff; /* White text */
+	font-weight: bold;
+	padding: 0.5rem 1.25rem; /* Same padding as header buttons */
+	border: solid 1px #ffffff; /* Border to match the button style */
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+  }
+  
+  .article-navbar ul li a:hover {
+	background-color: rgba(255, 255, 255, 0.075); /* Hover effect */
+  }
+  
+  .article-navbar ul li a:active {
+	background-color: rgba(255, 255, 255, 0.175); /* Active state effect */
+  }
 /* Testing ScreenShot feature */
