@@ -413,7 +413,7 @@
 								<div class="grid">
 
 									<!-- card 1 -->
-									<div class="grid-item full">
+									<div class="grid-item full game-item" data-title="Mayanagari">
 										<div class="card" onclick="Mayanagari()"></button>
 										  <img
 											class="card-img lazyload"
@@ -470,7 +470,7 @@
 									</div>
 
 									<!-- Card 2 -->
-									<div class="grid-item prototypes">
+									<div class="grid-item prototypes game-item" data-title="Dojo Defenders">
 										<div class="card" onclick="DojoDefenders()">
 										  <img
 											class="card-img lazyload"
@@ -533,7 +533,7 @@
 								<h3  class="major">Personal Projects</h3>
 								<div class="grid">
 									<!-- card 1 -->
-									 <div class="grid-item prototypes game-item" data-title="Frankenstein"> <!-- Added data-tiitle and game-item to auto populate the games in horizontal bar -->
+									 <div class="grid-item prototypes game-item" data-title="I Frankenstein"> <!-- Added data-tiitle and game-item to auto populate the games in horizontal bar -->
 										<div class="card" onclick="Frankenstein()">
 										  
 											<img
@@ -648,7 +648,7 @@
 									</div>
 
 									<!-- Card 3 -->
-									<div class="grid-item full game-item" data-title="HolySouls">
+									<div class="grid-item full game-item" data-title="Holy Souls">
 									  <div class="card" onclick="HolySouls()">
 										<img class="card-img lazyload" data-src="./images/Holy Souls/Holy Souls Banner.png" alt="Holy Souls Banner Pic" />
 										<div class="card-content">
@@ -754,7 +754,7 @@
 									</div> -->
 
 									<!-- Card 5 -->
-									<div class="grid-item full game-item" data-title="ARBirthdayGift">
+									<div class="grid-item full game-item" data-title="AR Birthday Gift">
 										<div class="card" onclick="ARBirthdayGift()">
 										  <img class="card-img lazyload" data-src="./images/AR Birthday Gift/ARBirthdayGift Screenshot.png" alt="Maldives" />
 										  <div class="card-content">
@@ -807,7 +807,7 @@
 									</div>
 
 									<!-- Card 6 -->
-									<div class="grid-item prototypes game-item" data-title="DigThrough">
+									<div class="grid-item prototypes game-item" data-title="Dig Through">
 										<div class="card" onclick="DigThrough()">
 										  <img class="card-img lazyload" data-src="./images/Dig Through/Dig Through Thumbnail.png" alt="Dig Through Thumbnail Pic" />
 										  <div class="card-content">
@@ -860,7 +860,7 @@
 									</div>
 
 									<!-- Card 7 -->
-									<div class="grid-item prototypes game-item" data-title="SoundScapes" >
+									<div class="grid-item prototypes game-item" data-title="Sound Scapes" >
 										<div class="card" onclick="SoundScapes()">
 										  <img class="card-img lazyload" data-src="./images/SoundScapes/Sound Scape.PNG" alt="Sound Scapes Card Pic" />
 										  <div class="card-content">
@@ -967,7 +967,7 @@
 									  </div> -->
 
 									  <!-- Card 9 -->
-									<div class="grid-item mechanic game-item" data-title="InventorySystem">
+									<div class="grid-item mechanic game-item" data-title="Inventory System">
 										<div class="card" onclick="InventorySystem()">
 										  <img class="card-img lazyload" data-src="./images/Inventory/Inventory Thumbnail Temp.png" alt="Rome" />
 										  <div class="card-content">
@@ -1020,7 +1020,7 @@
 									  </div>
 
 									   <!-- Card 10 -->
-									<div class="grid-item mechanic game-item" data-title="GrapplingHook">
+									<div class="grid-item mechanic game-item" data-title="Grappling Hook">
 										<div class="card" onclick="GrapplingHook()">
 										  <img class="card-img lazyload" data-src="./images/Grappling Hook/Grappling hook banner.png" alt="Rome" />
 										  <div class="card-content">
@@ -1080,6 +1080,113 @@
 						
 
 						<!-- Games Starts here -->
+						<article id="HolySouls" class="Games">
+							<br>
+							<nav class="article-navbar use-middle">
+								<ul>
+								  <li><a href="#about">About</a></li>
+								  <li><a href="#Works">Games</a></li>
+								  <li><a href="#ArtWorks">Extras</a></li>
+								  <li><a href="#contact">Contact</a></li>
+								</ul>
+							  </nav>
+								<h2 class="Project-Heading">Holy Souls</h2>
+								<span class="image main"><img class="lazyload" data-src="images/Holy Souls/Holy Souls Banner 2.png" alt="" /></span>
+								<div class="Game-video">
+									<iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/EFZtaXohY7A"  title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							    </div>
+								<div class="game-carousel">
+									<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
+									<div class="game-container">
+										<!-- JavaScript will dynamically populate this area with game items -->
+									</div>
+									<button class="carousel-nav right" onclick="scrollCarouselRight()">&#9654;</button>
+								</div>
+								<div class="GameDetails">
+									<div class="GameInformation">
+										<div class="game-info-banner"></div>
+										<br>
+										<h3 class="major">ℹ️ Description</h3> 
+										<p>As the arbiter of the spirits in purgatory, you possess the sovereignty to bestow upon them either a revitalizing breath of life or a final verdict of death. Your choices shall shape their ultimate fate, and you are the one who holds the key to their existence.
+										</p>
+										
+
+										<h3 class="major">💫Features</h3>
+										<ul>
+											<li>Implemented a procedural maze generation system utilizing the breadth-first search algorithm, resulting in dynamic and engaging gameplay.</li>
+											<li>Developed a high-score saving and loading feature, improving game functionality and enhancing user experience. </li>
+											<li>Maze tile Breaking Mechanic triggered every 10 seconds</li>
+											<li>Endless Mazes</li>
+											<li>Every sound in this game was crafted, tuned, or compiled by me, ensuring a fully immersive auditory experience.</li>
+										</ul>
+										
+										
+										<h3 class="major"> ✅Highlights</h3>
+										<ul>
+											<li>Solo-Dev</li>
+											<li>Designed and programmed a unique tile-breaking and restoration mechanic from scratch, adding depth and complexity to the game's core mechanics.</li>
+											<li>Look and Feel of Game</li>
+												<li class="spaced-list">Global Volume Configuration</li>
+												<li class="spaced-list">Lighting</li>
+											<li>Effects</li>
+												<li class="spaced-list">Camera Shake</li>
+											<li>Shaders</li>
+												<li class="spaced-list">Wall disolve shader</li>
+												<li class="spaced-list">Abstract Lava shader</li>
+										</ul>
+									</div>
+									<div class="GameToolInfo">
+										<div class="game-info-banner"></div>
+										<p>
+											<h3 class="major">📅 Year</h3>
+											<ul> <li>2022</li> 
+											</ul>
+
+											<h3 class="major">💻Platform</h3>
+											<ul> <li>Mobile</li> 
+											</ul>
+											
+
+											<h3 class="major">⚙️Engine</h3> 
+											<ul>
+											<li>Unity</li>
+											</ul>
+											
+											<h3 class="major">🙍🏽Role</h3> 
+											<ul>
+												<li>Programmer</li>
+												<li>Effect Artist</li>
+												<li>Game Design</li>
+												<li>Lighting</li>
+											</ul>
+											
+											<h3 class="major">👥Team Size</h3> 
+											<ul>
+											<li>Solo Project</li>
+											</ul>
+											
+
+											<!-- <h3 class="major">⌛Time Taken</h3> 
+											<ul>
+												<li>Production -  days</li>
+												<li>+2 days BUG fixing</li>
+											</ul> -->
+											
+
+											<h3 class="major">🛠️Tools Used</h3> 
+											<ul>
+												<li>Unity</li>
+												<li>Maya</li>
+												<li>Illustrator</li>
+												<li>Photoshop</li>
+												<li>Obsidian</li>
+											</ul>
+										</p>
+									</div>
+								</div>
+								
+						</article>
+
 						<article id="I-Frankenstein" class="Games">
 							<br>
 							<nav class="article-navbar use-middle">
@@ -1202,7 +1309,7 @@
 									</div>
 								</div>
 								
-							</article>
+						</article>
 
 						<article id="TheElementals" class="Games">
 							<br>
@@ -1323,116 +1430,9 @@
 									</div>
 								</div>
 								
-							</article>
+						</article>
 
-						<article id="HolySouls" class="Games">
-							<br>
-							<nav class="article-navbar use-middle">
-								<ul>
-								  <li><a href="#about">About</a></li>
-								  <li><a href="#Works">Games</a></li>
-								  <li><a href="#ArtWorks">Extras</a></li>
-								  <li><a href="#contact">Contact</a></li>
-								</ul>
-							  </nav>
-								<h2 class="Project-Heading">Holy Souls</h2>
-								<span class="image main"><img class="lazyload" data-src="images/Holy Souls/Holy Souls Banner 2.png" alt="" /></span>
-								<div class="Game-video">
-									<iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/EFZtaXohY7A"  title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-							    </div>
-								<div class="game-carousel">
-									<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
-									<div class="game-container">
-										<!-- JavaScript will dynamically populate this area with game items -->
-									</div>
-									<button class="carousel-nav right" onclick="scrollCarouselRight()">&#9654;</button>
-								</div>
-								<div class="GameDetails">
-									<div class="GameInformation">
-										<div class="game-info-banner"></div>
-										<br>
-										<h3 class="major">ℹ️ Description</h3> 
-										<p>As the arbiter of the spirits in purgatory, you possess the sovereignty to bestow upon them either a revitalizing breath of life or a final verdict of death. Your choices shall shape their ultimate fate, and you are the one who holds the key to their existence.
-										</p>
-										
-
-										<h3 class="major">💫Features</h3>
-										<ul>
-											<li>Implemented a procedural maze generation system utilizing the breadth-first search algorithm, resulting in dynamic and engaging gameplay.</li>
-											<li>Developed a high-score saving and loading feature, improving game functionality and enhancing user experience. </li>
-											<li>Maze tile Breaking Mechanic triggered every 10 seconds</li>
-											<li>Endless Mazes</li>
-											<li>Every sound in this game was crafted, tuned, or compiled by me, ensuring a fully immersive auditory experience.</li>
-										</ul>
-										
-										
-										<h3 class="major"> ✅Highlights</h3>
-										<ul>
-											<li>Solo-Dev</li>
-											<li>Designed and programmed a unique tile-breaking and restoration mechanic from scratch, adding depth and complexity to the game's core mechanics.</li>
-											<li>Look and Feel of Game</li>
-												<li class="spaced-list">Global Volume Configuration</li>
-												<li class="spaced-list">Lighting</li>
-											<li>Effects</li>
-												<li class="spaced-list">Camera Shake</li>
-											<li>Shaders</li>
-												<li class="spaced-list">Wall disolve shader</li>
-												<li class="spaced-list">Abstract Lava shader</li>
-										</ul>
-									</div>
-									<div class="GameToolInfo">
-										<div class="game-info-banner"></div>
-										<p>
-											<h3 class="major">📅 Year</h3>
-											<ul> <li>2022</li> 
-											</ul>
-
-											<h3 class="major">💻Platform</h3>
-											<ul> <li>Mobile</li> 
-											</ul>
-											
-
-											<h3 class="major">⚙️Engine</h3> 
-											<ul>
-											<li>Unity</li>
-											</ul>
-											
-											<h3 class="major">🙍🏽Role</h3> 
-											<ul>
-												<li>Programmer</li>
-												<li>Effect Artist</li>
-												<li>Game Design</li>
-												<li>Lighting</li>
-											</ul>
-											
-											<h3 class="major">👥Team Size</h3> 
-											<ul>
-											<li>Solo Project</li>
-											</ul>
-											
-
-											<!-- <h3 class="major">⌛Time Taken</h3> 
-											<ul>
-												<li>Production -  days</li>
-												<li>+2 days BUG fixing</li>
-											</ul> -->
-											
-
-											<h3 class="major">🛠️Tools Used</h3> 
-											<ul>
-												<li>Unity</li>
-												<li>Maya</li>
-												<li>Illustrator</li>
-												<li>Photoshop</li>
-												<li>Obsidian</li>
-											</ul>
-										</p>
-									</div>
-								</div>
-								
-							</article>
-
-						<article id="EndlessShooter" class="Games">
+						<article id="EndlessShooter" class="GamesLeft">
 							<br>
 							<nav class="article-navbar use-middle">
 								<ul>
@@ -1447,6 +1447,13 @@
 								<div class="Game-video">
 									<iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/PN2B2_hDFAQ" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							    </div>
+								<div class="game-carousel">
+									<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
+									<div class="game-container">
+										JavaScript will dynamically populate this area with game items
+									</div>
+									<button class="carousel-nav right" onclick="scrollCarouselRight()">&#9654;</button>
+								</div>
 								<div class="GameDetails">
 									<div class="GameInformation">
 										<div class="game-info-banner"></div>
@@ -1522,7 +1529,7 @@
 									</div>
 								</div>
 								
-							</article>
+						</article>
 							
 						<article id="ARBirthdayGift" class="Games">
 							<br>
@@ -1540,6 +1547,15 @@
 								<div class="Game-video">
 									<iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/rZUOGaFCnyY" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							    </div>
+
+								<div class="game-carousel">
+									<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
+									<div class="game-container">
+										<!-- JavaScript will dynamically populate this area with game items -->
+									</div>
+									<button class="carousel-nav right" onclick="scrollCarouselRight()">&#9654;</button>
+								</div>
+
 								<div class="GameDetails">
 									<div class="GameInformation">
 										<div class="game-info-banner"></div>
@@ -1624,7 +1640,7 @@
 									</div>
 								</div>
 								
-							</article>
+						</article>
 
 						<article id="SoundScapes" class="Games">
 							<br>
@@ -1641,6 +1657,15 @@
 							<div class="Game-video">
 								<iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/OPwNk_qYaPA" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							</div>
+
+							<div class="game-carousel">
+								<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
+								<div class="game-container">
+									<!-- JavaScript will dynamically populate this area with game items -->
+								</div>
+								<button class="carousel-nav right" onclick="scrollCarouselRight()">&#9654;</button>
+							</div>
+
 							<div class="GameDetails">
 								<div class="GameInformation">
 									<div class="game-info-banner"></div>
@@ -1719,7 +1744,7 @@
 							
 						</article>
 
-						<article id="FolkArt" class="Games">
+						<article id="FolkArt" class="GamesLeft">
 							<br>
 							<nav class="article-navbar use-middle">
 								<ul>
@@ -1734,6 +1759,15 @@
 								<div class="Game-video">
 									<iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/GaxwkS7HyN4" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 								</div>
+
+								<div class="game-carousel">
+									<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
+									<div class="game-container">
+										<!-- JavaScript will dynamically populate this area with game items -->
+									</div>
+									<button class="carousel-nav right" onclick="scrollCarouselRight()">&#9654;</button>
+								</div>
+
 								<div class="GameDetails">
 									<div class="GameInformation">
 										<div class="game-info-banner"></div>
@@ -1820,9 +1854,8 @@
 									</div>
 								</div>
 								
-							</article>
+						</article>
 
-						
 						<article id="DigThrough" class="Games">
 							<br>
 							<nav class="article-navbar use-middle">
@@ -1838,6 +1871,15 @@
 							<div class="Game-video">
 								<iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/rX6Ciszmjl8" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							</div>
+
+							<div class="game-carousel">
+								<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
+								<div class="game-container">
+									<!-- JavaScript will dynamically populate this area with game items -->
+								</div>
+								<button class="carousel-nav right" onclick="scrollCarouselRight()">&#9654;</button>
+							</div>
+
 							<div class="GameDetails">
 								<div class="GameInformation">
 									<div class="game-info-banner"></div>
@@ -1945,6 +1987,15 @@
 							<div class="Game-video">
 								<iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/q1Exgpeys7M?si=DYukRn8_rxeayod3" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							</div>
+
+							<div class="game-carousel">
+								<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
+								<div class="game-container">
+									<!-- JavaScript will dynamically populate this area with game items -->
+								</div>
+								<button class="carousel-nav right" onclick="scrollCarouselRight()">&#9654;</button>
+							</div>
+
 							<div class="GameDetails">
 								<div class="GameInformation">
 									<div class="game-info-banner"></div>
@@ -2038,6 +2089,15 @@
 							<div class="Game-video">
 								<iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/NfWbssrdx3c?si=pgCg75SwO1hO4I16" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							</div>
+
+							<div class="game-carousel">
+								<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
+								<div class="game-container">
+									<!-- JavaScript will dynamically populate this area with game items -->
+								</div>
+								<button class="carousel-nav right" onclick="scrollCarouselRight()">&#9654;</button>
+							</div>
+
 							<div class="GameDetails">
 								<div class="GameInformation">
 									<div class="game-info-banner"></div>
@@ -2133,6 +2193,15 @@
 							<div class="Game-video">
 								<iframe class="lazyload" width="560" height="315" data-src="https://www.youtube.com/embed/_Ofj-bAjJ8Y?si=466srHnOzEf9lAUp" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							</div>
+							<Br>
+							<div class="game-carousel">
+								<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
+								<div class="game-container">
+									<!-- JavaScript will dynamically populate this area with game items -->
+								</div>
+								<button class="carousel-nav right" onclick="scrollCarouselRight()">&#9654;</button>
+							</div>
+						</Br>
 							<div class="GameDetails">
 								<div class="GameInformation">
 									<div class="game-info-banner"></div>
@@ -2208,6 +2277,15 @@
 							<div class="Game-video">
 								<iframe class="lazyload" width="560" height="315" data-src="" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							</div>
+
+							<div class="game-carousel">
+								<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
+								<div class="game-container">
+									<!-- JavaScript will dynamically populate this area with game items -->
+								</div>
+								<button class="carousel-nav right" onclick="scrollCarouselRight()">&#9654;</button>
+							</div>
+
 							<div class="GameDetails">
 								<div class="GameInformation">
 									<div class="game-info-banner"></div>

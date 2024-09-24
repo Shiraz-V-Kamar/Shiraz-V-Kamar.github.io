@@ -474,46 +474,74 @@
 
 		// Adding Horizontal Game Bar Auto populating
 		document.addEventListener("DOMContentLoaded", function () {
-			const games = document.querySelectorAll('.game-item'); // Find all game items in the HTML
-			const carouselContainer = document.querySelector('.game-container'); // The carousel container
+			// Find all articles with the "Games" class
+			const articles = document.querySelectorAll('article.Games');
 		
-			// Loop through all games and create a corresponding item in the carousel
-			games.forEach(game => {
-				const gameImg = game.querySelector('img'); // Get the image inside the child div
-				const gameTitle = game.getAttribute('data-title'); // Get the game title
-				const gameImgSrc = gameImg.getAttribute('data-src'); // Get the 'data-src' attribute for lazyload images
+			// Find all game items globally (outside the articles)
+			const games = document.querySelectorAll('.game-item');
 		
-				// Create a new div for the game in the carousel
-				const newGameDiv = document.createElement('div');
-				newGameDiv.classList.add('game-item'); // Add the class 'game-item' to the new div
-				newGameDiv.innerHTML = `
-					<img src="${gameImgSrc}" alt="${gameTitle}">
-					<h3>${gameTitle}</h3>
-				`;
+			// Loop through each article
+			articles.forEach(article => {
+				const carouselContainer = article.querySelector('.game-container'); // The carousel container inside this article
+				const leftButton = article.querySelector('.carousel-nav.left'); // Left button for this article
+				const rightButton = article.querySelector('.carousel-nav.right'); // Right button for this article
 		
-				// Reuse the existing onclick event from the game item
-				newGameDiv.onclick = game.querySelector('.card').onclick;
+				// Ensure that the game-container exists for this article
+				if (!carouselContainer) {
+					console.error("Game container not found for article:", article.id);
+					return; // Skip if no carousel container is found
+				}
 		
-				// Append the new game item to the carousel
-				carouselContainer.appendChild(newGameDiv);
+				// Get the current game title from the current article
+				const currentGameTitle = article.getAttribute('id');
+				console.log("Current article ID:", currentGameTitle);
+		
+				// Loop through all game items (outside articles) and populate the carousel, excluding the current game
+				games.forEach(game => {
+					const gameTitle = game.getAttribute('data-title'); // Get the game title
+		
+					// Skip the current game if the title matches the current article's title
+					if (gameTitle === currentGameTitle) {
+						console.log(`Skipping current game: ${gameTitle}`);
+						return;
+					}
+		
+					const gameImg = game.querySelector('img'); // Get the image inside the game item
+					const gameImgSrc = gameImg.getAttribute('data-src'); // Get the 'data-src' attribute for lazyload images
+		
+					// Create a new div for the game in the carousel
+					const newGameDiv = document.createElement('div');
+					newGameDiv.classList.add('game-item'); // Add the class 'game-item' to the new div
+					newGameDiv.innerHTML = `
+						<img src="${gameImgSrc}" alt="${gameTitle}">
+						<h3>${gameTitle}</h3>
+					`;
+		
+					// Reuse the existing onclick event from the game item
+					newGameDiv.onclick = game.querySelector('.card').onclick;
+		
+					// Append the new game item to the carousel of this article
+					carouselContainer.appendChild(newGameDiv);
+					console.log(`Added game: ${gameTitle} to article: ${currentGameTitle}`);
+				});
+		
+				// Scrolling logic for the left button of this specific article's carousel
+				leftButton.addEventListener('click', function () {
+					carouselContainer.scrollBy({
+						left: -carouselContainer.offsetWidth / 2, // Scroll half the width of the container to the left
+						behavior: 'smooth'
+					});
+				});
+		
+				// Scrolling logic for the right button of this specific article's carousel
+				rightButton.addEventListener('click', function () {
+					carouselContainer.scrollBy({
+						left: carouselContainer.offsetWidth / 2, // Scroll half the width of the container to the right
+						behavior: 'smooth'
+					});
+				});
 			});
-		
-			// Scrolling logic for left and right buttons
-			window.scrollCarouselLeft = function () {
-				const container = document.querySelector('.game-container');
-				container.scrollBy({
-					left: -container.offsetWidth / 2, // Scroll half the width of the container to the left
-					behavior: 'smooth'
-				});
-			};
-		
-			window.scrollCarouselRight = function () {
-				const container = document.querySelector('.game-container');
-				container.scrollBy({
-					left: container.offsetWidth / 2, // Scroll half the width of the container to the right
-					behavior: 'smooth'
-				});
-			};
 		});
+		
 		
 })(jQuery);
