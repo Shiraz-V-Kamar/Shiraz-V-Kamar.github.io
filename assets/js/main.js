@@ -514,9 +514,9 @@
 					newGameDiv.classList.add('game-item'); // Add the class 'game-item' to the new div
 					newGameDiv.innerHTML = `
 						<img src="${gameImgSrc}" alt="${gameTitle}">
-						<h3>${gameTitle}</h3>
-					`;
-		
+						`;
+						// <h3>${gameTitle}</h3>
+						
 					// Reuse the existing onclick event from the game item
 					newGameDiv.onclick = game.querySelector('.card').onclick;
 		

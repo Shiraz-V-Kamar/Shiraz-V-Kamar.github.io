@@ -2734,11 +2734,7 @@ input, select, textarea {
     }
 }
 
-
-/* Testing ScreenShot feature */
-
 /* Image container styling */
-/* Controls container for horizontal alignment */
 /* Controls container for horizontal alignment */
 #controls-container {
     display: flex;
@@ -2827,7 +2823,7 @@ button.prev-button:hover, button.next-button:hover {
         gap: 10px; /* Further reduce space between buttons and indicators */
     }
 }
- 
+
 /* Ensure the image fits within the article without overflowing */
 #image-container {
     display: flex;
