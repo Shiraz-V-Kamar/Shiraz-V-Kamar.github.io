@@ -542,6 +542,70 @@
 				});
 			});
 		});
+
+		// Adding Screenshot logic
+		// Store the screenshots and videos for each game
+		document.addEventListener("DOMContentLoaded", function () {
+			const game = {
+				name: "I-Frankenstein",
+				folder: "images/I-Frankenstein/Screenshots/",
+				screenshots: ["screenshot1.png", "screenshot2.png"], // Add as many screenshots as needed
+				currentIndex: 0 // Start at the first screenshot
+			};
+		
+			const currentImage = document.getElementById('current-image');
+			const prevButton = document.querySelector('.prev-button');
+			const nextButton = document.querySelector('.next-button');
+			const indicatorsContainer = document.getElementById('indicators');
+		
+			// Show the first screenshot initially
+			updateImage(game);
+			updateIndicators(game); // Initialize the indicators on page load
+		
+			// Next button functionality
+			nextButton.addEventListener('click', function () {
+				if (game.currentIndex < game.screenshots.length - 1) {
+					game.currentIndex++;
+				} else {
+					game.currentIndex = 0; // Loop back to the first image
+				}
+				updateImage(game);
+				updateIndicators(game); // Update indicators when next is clicked
+			});
+		
+			// Previous button functionality
+			prevButton.addEventListener('click', function () {
+				if (game.currentIndex > 0) {
+					game.currentIndex--;
+				} else {
+					game.currentIndex = game.screenshots.length - 1; // Loop to the last image
+				}
+				updateImage(game);
+				updateIndicators(game); // Update indicators when previous is clicked
+			});
+		
+			// Function to update the image
+			function updateImage(game) {
+				const imageSrc = game.screenshots[game.currentIndex];
+				currentImage.src = `${game.folder}${imageSrc}`;
+				console.log(`Displaying image: ${currentImage.src}`);
+			}
+		
+			// Function to update the indicators
+			function updateIndicators(game) {
+				indicatorsContainer.innerHTML = ''; // Clear existing indicators
+				for (let i = 0; i < game.screenshots.length; i++) {
+					const indicator = document.createElement('div');
+					indicator.classList.add('indicator');
+					if (i === game.currentIndex) {
+						indicator.classList.add('active'); // Highlight current screenshot
+					}
+					indicatorsContainer.appendChild(indicator);
+				}
+			}
+		});
+		
+		
 		
 		
 })(jQuery);

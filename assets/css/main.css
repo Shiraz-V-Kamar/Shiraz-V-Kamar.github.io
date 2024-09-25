@@ -2733,4 +2733,113 @@ input, select, textarea {
         margin: 0.5rem 0; /* Adjust margin for vertical stacking */
     }
 }
+
+
 /* Testing ScreenShot feature */
+
+/* Image container styling */
+/* Controls container for horizontal alignment */
+/* Controls container for horizontal alignment */
+#controls-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between buttons and indicators */
+    margin-top: 20px;
+}
+
+/* Button styling for icons - Box-shaped */
+button.prev-button, button.next-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;  /* Width of the box */
+    height: 50px; /* Height of the box */
+    background-color: #333; /* Background color */
+    border: none; /* Remove border */
+    cursor: pointer;
+    color: white; /* Icon color */
+    font-size: 20px; /* Size of the icon */
+}
+
+/* Icon styling inside buttons */
+button.prev-button i, button.next-button i {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Indicator styling */
+#indicators {
+    display: flex;
+    gap: 10px; /* Space between indicators */
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.indicator.active {
+    background-color: white; /* Highlight the active indicator */
+}
+
+/* Hover effect for buttons */
+button.prev-button:hover, button.next-button:hover {
+    background-color: #555; /* Darker background on hover */
+}
+
+/* ---- MEDIA QUERIES FOR SMALLER SCREENS ---- */
+
+/* For screens smaller than 768px (tablets and mobiles) */
+@media screen and (max-width: 768px) {
+    button.prev-button, button.next-button {
+        width: 40px; /* Reduce button width */
+        height: 40px; /* Reduce button height */
+        font-size: 16px; /* Reduce icon size */
+    }
+
+    .indicator {
+        width: 8px; /* Reduce indicator size */
+        height: 8px;
+    }
+
+    #controls-container {
+        gap: 15px; /* Reduce space between buttons and indicators */
+    }
+}
+
+/* For screens smaller than 480px (mobile phones) */
+@media screen and (max-width: 480px) {
+    button.prev-button, button.next-button {
+        width: 30px; /* Further reduce button width */
+        height: 30px; /* Further reduce button height */
+        font-size: 14px; /* Further reduce icon size */
+    }
+
+    .indicator {
+        width: 6px; /* Further reduce indicator size */
+        height: 6px;
+    }
+
+    #controls-container {
+        gap: 10px; /* Further reduce space between buttons and indicators */
+    }
+}
+ 
+/* Ensure the image fits within the article without overflowing */
+#image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%; /* Make sure the container does not overflow */
+}
+
+#current-image {
+    max-width: 100%; /* Restricts the image width to the container */
+    max-height: 100%; /* Restricts the image height to the container */
+    height: auto; /* Keeps the aspect ratio */
+    object-fit: contain; /* Ensures the image is fully visible without being cropped */
+}
+  

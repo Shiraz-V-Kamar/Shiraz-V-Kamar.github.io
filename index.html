@@ -1200,8 +1200,18 @@
 							<h2 class="Project-Heading">I-Frankenstein</h2>
 							<span class="image main"><img class="lazyload" data-src="images/I-Frankenstein/Frankenstein Game Banner.png" alt="" /></span>
 							<div class="Game-video">
-								<iframe class="lazyload" width="560" height="315" src="https://www.youtube.com/embed/KdBZage87M8?si=1EBiQUfAE4kKaWjD" title="YouTube video player" frameborder="0" allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-							    </div>
+
+								<!-- <button class="prev-button" onclick="prevMedia()">&#10094;</button>
+								<button class="next-button" onclick="nextMedia()">&#10095;</button> -->
+								<iframe id="media-frame" class="lazyload" width="560" height="315" 
+									src="https://www.youtube.com/embed/KdBZage87M8?si=1EBiQUfAE4kKaWjD" 
+									title="YouTube video player" 
+									frameborder="0" 
+									allow="accelerometer;  clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+									allowfullscreen>
+								</iframe>
+
+							</div>
 								<div class="game-carousel">
 									<button class="carousel-nav left" onclick="scrollCarouselLeft()">&#9664;</button>
 									<div class="game-container">
@@ -1307,6 +1317,25 @@
 											</ul>
 										</p>
 									</div>
+								</div>
+
+								<br>
+								<br>
+								<h3 class="major">🖼️ ScreenShots</h3> 
+								<!-- Image Container for Screenshots -->
+								<div id="image-container">
+									<img id="current-image" src="" alt="Screenshot">
+								</div>
+								
+								<!-- Controls and Indicators Container -->
+								<div id="controls-container">
+									<button class="prev-button">
+									<i class="fas fa-arrow-left"></i> <!-- Left arrow icon for Previous -->
+									</button>
+									<div id="indicators"></div>
+									<button class="next-button">
+									<i class="fas fa-arrow-right"></i> <!-- Right arrow icon for Next -->
+									</button>
 								</div>
 								
 						</article>
