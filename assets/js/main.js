@@ -546,53 +546,71 @@
 		// Adding Screenshot logic
 		// Store the screenshots and videos for each game
 		document.addEventListener("DOMContentLoaded", function () {
-			const game = {
-				name: "I-Frankenstein",
-				folder: "images/I-Frankenstein/Screenshots/",
-				screenshots: ["screenshot1.png", "screenshot2.png"], // Add as many screenshots as needed
-				currentIndex: 0 // Start at the first screenshot
+			const games = {
+				"I-Frankenstein": {
+					name: "I-Frankenstein",
+					folder: "images/I-Frankenstein/Screenshots/",
+					screenshots: ["screenshot1.png", "screenshot2.png"],
+					currentIndex: 0 // Start at the first screenshot
+				},
+				"HolySouls": {
+					name: "Another Game",
+					folder: "images/AnotherGame/Screenshots/",
+					screenshots: ["screenshot1.png", "screenshot2.png", "screenshot3.png"],
+					currentIndex: 0 // Start at the first screenshot
+				}
+				// Add more games as needed
 			};
 		
-			const currentImage = document.getElementById('current-image');
-			const prevButton = document.querySelector('.prev-button');
-			const nextButton = document.querySelector('.next-button');
-			const indicatorsContainer = document.getElementById('indicators');
+			// Function to initialize the media for a given article
+			function initializeGameMedia(articleId) {
+				const game = games[articleId]; // Get the game based on article ID
+				const currentImage = document.querySelector(`#${articleId} #current-image`);
+				const prevButton = document.querySelector(`#${articleId} .prev-button`);
+				const nextButton = document.querySelector(`#${articleId} .next-button`);
+				const indicatorsContainer = document.querySelector(`#${articleId} #indicators`);
 		
-			// Show the first screenshot initially
-			updateImage(game);
-			updateIndicators(game); // Initialize the indicators on page load
-		
-			// Next button functionality
-			nextButton.addEventListener('click', function () {
-				if (game.currentIndex < game.screenshots.length - 1) {
-					game.currentIndex++;
-				} else {
-					game.currentIndex = 0; // Loop back to the first image
+				if (!game || !currentImage || !prevButton || !nextButton || !indicatorsContainer) {
+					console.error(`Error initializing game media for ${articleId}`);
+					return;
 				}
-				updateImage(game);
-				updateIndicators(game); // Update indicators when next is clicked
-			});
 		
-			// Previous button functionality
-			prevButton.addEventListener('click', function () {
-				if (game.currentIndex > 0) {
-					game.currentIndex--;
-				} else {
-					game.currentIndex = game.screenshots.length - 1; // Loop to the last image
-				}
-				updateImage(game);
-				updateIndicators(game); // Update indicators when previous is clicked
-			});
+				// Show the first screenshot initially
+				updateImage(game, currentImage);
+				updateIndicators(game, indicatorsContainer); // Initialize the indicators
+		
+				// Next button functionality
+				nextButton.addEventListener('click', function () {
+					if (game.currentIndex < game.screenshots.length - 1) {
+						game.currentIndex++;
+					} else {
+						game.currentIndex = 0; // Loop back to the first image
+					}
+					updateImage(game, currentImage);
+					updateIndicators(game, indicatorsContainer); // Update indicators when next is clicked
+				});
+		
+				// Previous button functionality
+				prevButton.addEventListener('click', function () {
+					if (game.currentIndex > 0) {
+						game.currentIndex--;
+					} else {
+						game.currentIndex = game.screenshots.length - 1; // Loop to the last image
+					}
+					updateImage(game, currentImage);
+					updateIndicators(game, indicatorsContainer); // Update indicators when previous is clicked
+				});
+			}
 		
 			// Function to update the image
-			function updateImage(game) {
+			function updateImage(game, imgElement) {
 				const imageSrc = game.screenshots[game.currentIndex];
-				currentImage.src = `${game.folder}${imageSrc}`;
-				console.log(`Displaying image: ${currentImage.src}`);
+				imgElement.src = `${game.folder}${imageSrc}`;
+				console.log(`Displaying image: ${imgElement.src}`);
 			}
 		
 			// Function to update the indicators
-			function updateIndicators(game) {
+			function updateIndicators(game, indicatorsContainer) {
 				indicatorsContainer.innerHTML = ''; // Clear existing indicators
 				for (let i = 0; i < game.screenshots.length; i++) {
 					const indicator = document.createElement('div');
@@ -603,9 +621,13 @@
 					indicatorsContainer.appendChild(indicator);
 				}
 			}
+		
+			// Initialize media for all games (articles)
+			document.querySelectorAll('article.Games').forEach(article => {
+				const articleId = article.id; // Get the article ID
+				initializeGameMedia(articleId); // Initialize the game media for this article
+			});
 		});
-		
-		
 		
 		
 })(jQuery);
